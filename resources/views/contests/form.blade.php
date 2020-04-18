@@ -158,6 +158,45 @@ $table->string('contest_heading', 100);
 </div>
 
 <div class="form-group">
+    {!! Form::label('intro_body1', 'Intro Body 1:  (250 chars max, / to start a new line)') !!} 
+    {!! Form::text('intro_body1', null, ['class' => 'form-control', 'placeholder' => 'Intro Body 1','maxlength' => 250 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('intro_body2', 'Intro Body 2:  (250 chars max, / to start a new line)') !!} 
+    {!! Form::text('intro_body2', null, ['class' => 'form-control', 'placeholder' => 'Intro Body 2','maxlength' => 250 ]) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('intro_button1_text', 'Intro Button 1 Text:  (50 chars max, leave blank to not display)') !!} 
+    {!! Form::text('intro_button1_text', null, ['class'=>'form-control', 'placeholder' => 'intro button 1 text','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('intro_button1_link', 'Intro Button 1 link:  (50 chars max, no https:// required)') !!} 
+    {!! Form::text('intro_button1_link', null, ['class'=>'form-control', 'placeholder' => 'intro button 1 link','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('intro_media1_id', 'Intro Image 1 (top right):') !!} 
+    {!! Form::select('intro_media1_id', [0 => 'Select an image'] , $tagsDefault, ['class'=>'form-control', 'id'=>'intro_media1_id']) !!}
+</div> 
+<div class="form-group">
+    {!! Form::label('intro_media2_id', 'Intro Image 2 (bottom left):') !!} 
+    {!! Form::select('intro_media2_id', [0 => 'Select an image'] , $tagsDefault, ['class'=>'form-control', 'id'=>'intro_media2_id']) !!}
+</div> 
+<div class="form-group">
+    {!! Form::label('intro_body3', 'Intro Body 3:  (250 chars max, / to start a new line)') !!} 
+    {!! Form::text('intro_body3', null, ['class' => 'form-control', 'placeholder' => 'Intro Body 3','maxlength' => 250 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('intro_button2_text', 'Intro Button 2 Text:  (50 chars max, leave blank to not display)') !!} 
+    {!! Form::text('intro_button2_text', null, ['class'=>'form-control', 'placeholder' => 'intro button 2 text','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('intro_button2_link', 'Intro Button 2 link:  (50 chars max, no https:// required)') !!} 
+    {!! Form::text('intro_button2_link', null, ['class'=>'form-control', 'placeholder' => 'intro button 2 link','maxlength' => 50 ]) !!}
+</div>
+
+
+<div class="form-group">
     {!! Form::label('tags', 'Tags:') !!} 
     {!! Form::select('tags[]', $tagsOptions, $tagsDefault, ['class'=>'form-control', 'multiple', 'id'=>'tags']) !!}
 </div>

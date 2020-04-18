@@ -20,16 +20,19 @@
     <div class="image-with-text__text js-overflow-container" style="min-height: 559.938px;">
       <div class="image-with-text__inner js-overflow-content">
         <div class="video__description aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <p style="padding: 20px 0px 0px 0px;line-height: 1.5em;">Since the beginning of time, jewellery has been an expression of human stories.</p>
-            <p style="line-height: 1.5em;">Love tokens, good luck talisman, and reminders of who we are and what matters.</p>
-            <p style="padding: 0px 0px 20px 0px;line-height: 1.5em;">Jewellery helps express who we are.</p>
-            <hr style="border: 1px solid #354863;width: 50%;margin: auto;margin-top: 5%;margin-bottom: 5%;height:0;" />
-            <p style="padding: 20px 0px 0px 0px;line-height: 1.5em;">With Love Darling wants to create a new special piece of jewellery for Comic Relief.</p> 
-            <p style="line-height: 1.5em;">Think about the story you want us to tell with your design.</p> 
-            <p style="line-height: 1.5em;">How can you inspire others to make a difference?</p> 
-            <p style="padding: 0px 0px 20px 0px;line-height: 1.5em;">We believe in you, and the art you create.</p>
+            <p style="padding: 20px 0px 20px 0px;line-height: 2em;">
+              @foreach ( explode('/',$contest->intro_body1) as $body)
+                {{ $body }}<br/>
+              @endforeach
+            </p>
+            <hr style="border: 1px solid #354863;width: 50%;margin:auto;height:0;" />
+            <p style="padding: 20px 0px 20px 0px;line-height: 2em;">
+              @foreach ( explode('/',$contest->intro_body2) as $body)
+                {{ $body }}<br/>
+              @endforeach
+            </p>
                
-<p><a href="/featured" class="btn btn--large btn--secondary btn--neutral caps" title="Desgin Contest Featured Entires">FEATURED ENTRIES</a></p></div>
+<p><a href="{{ $contest->intro_button1_link }}" class="btn btn--large btn--secondary btn--neutral caps" title="Desgin Contest Featured Entires">{{ $contest->intro_button1_text }}</a></p></div>
         
       </div>
     </div>

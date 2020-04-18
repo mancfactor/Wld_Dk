@@ -77,7 +77,7 @@ use Carbon\Carbon;
 class Contest extends Model
 {
     // enable mass-assignment of fields
-    protected $fillable = ['name','slogan','description','active','start_date','submit_date','vote_date','end_date','hashtag','how_it_work','rule','prize','contest_heading','menu_title','steps_media_id','step1_title','step1_body','step2_title','step2_body','step3_title','step3_body','video_heading','video_link','button1_text','button1_link','button2_text','button2_link','button3_text','button3_link','button4_text','button4_link','button5_text','button5_link','button6_text','button6_link'];
+    protected $fillable = ['name','slogan','description','active','start_date','submit_date','vote_date','end_date','hashtag','how_it_work','rule','prize','contest_heading','menu_title','steps_media_id','step1_title','step1_body','step2_title','step2_body','step3_title','step3_body','video_heading','video_link','button1_text','button1_link','button2_text','button2_link','button3_text','button3_link','button4_text','button4_link','button5_text','button5_link','button6_text','button6_link','intro_media1_id','intro_body1','intro_body2','intro_button1_text','intro_button1_link','intro_media2_id','intro_body3','intro_button2_text','intro_button2_link'];
      
     // Convert to carbon instances
     protected $dates = ['start_date','end_date','submit_date','vote_date'];

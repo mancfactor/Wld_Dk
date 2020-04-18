@@ -93,6 +93,12 @@ class ContestController extends Controller
         if(is_null($data['steps_media_id']) || !($data['steps_media_id'])) {
             $data['steps_media_id'] = null;
         }
+        if(is_null($data['intro_media1_id']) || !($data['intro_media1_id'])) {
+            $data['intro_media1_id'] = null;
+        }
+        if(is_null($data['intro_media2_id']) || !($data['intro_media2_id'])) {
+            $data['intro_media2_id'] = null;
+        }
         $contest->update($data);
         $contest->tags()->sync($request->input('tags'));
         

@@ -98,13 +98,17 @@
             <div class="image-with-text__text js-overflow-container" style="min-height: 331px;">
                 <div class="image-with-text__inner js-overflow-content">
                     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 70%;" />
-                    <p style="text-align:center;font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:36px;">Submit your design,<br />and tell us it's story.</p>
+                    <p style="text-align:center;font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:36px;">
+                        @foreach ( explode('/',$contest->intro_body3) as $body)
+                            {{ $body }}<br/>
+                        @endforeach
+                    </p>
                     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 70%;" />
                     <p><br /></p>
                     <p></p>
                     <p style="text-align: center;">
-                        <a class="btn btn--large btn--secondary btn--neutral caps" href="/enter-contest">
-                            <span class="tiny">UPLOAD YOUR DESIGN</span>
+                        <a class="btn btn--large btn--secondary btn--neutral caps" href="{{ $contest->intro_button2_link }}">
+                            <span class="tiny">{{ $contest->intro_button2_text }}</span>
                         </a>
                     </p>
                 </div>

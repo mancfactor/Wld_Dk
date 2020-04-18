@@ -2,7 +2,7 @@
 @section('content')
 @include('front.white.steps', ['contest', $contest])
 @include('front.white.video', ['contest', $contest])
-@include('front.white.featuredintro')
+@include('front.white.featuredintro', ['contest', $contest])
 @include('front.white.upload')
 @include('front.white.howtoenter', ['contest', $contest])
 @include('front.white.rules', ['contest', $contest])
