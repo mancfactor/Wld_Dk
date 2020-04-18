@@ -51,14 +51,36 @@ use Carbon\Carbon;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereViewOrder($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereVoteDate($value)
  * @mixin \Eloquent
+ * @property string $contest_heading
+ * @property string $menu_title
+ * @property int|null $steps_media_id
+ * @property string $step1_title
+ * @property string $step1_body
+ * @property string $step2_title
+ * @property string $step2_body
+ * @property string $step3_title
+ * @property string $step3_body
+ * @property string $video_heading
+ * @property string $video_link
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereContestHeading($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereMenuTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereStep1Body($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereStep1Title($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereStep2Body($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereStep2Title($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereStep3Body($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereStep3Title($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereStepsMediaId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereVideoHeading($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereVideoLink($value)
  */
 class Contest extends Model
 {
     // enable mass-assignment of fields
-    protected $fillable = ['name','slogan','description','active','start_date','submit_date','vote_date','end_date','hashtag','how_it_work','rule','prize'];
+    protected $fillable = ['name','slogan','description','active','start_date','submit_date','vote_date','end_date','hashtag','how_it_work','rule','prize','contest_heading','menu_title','steps_media_id','step1_title','step1_body','step2_title','step2_body','step3_title','step3_body','video_heading','video_link','button1_text','button1_link','button2_text','button2_link','button3_text','button3_link','button4_text','button4_link','button5_text','button5_link','button6_text','button6_link'];
      
     // Convert to carbon instances
-    protected $dates = ['start_date','end_date'];
+    protected $dates = ['start_date','end_date','submit_date','vote_date'];
  
     public function setStartDateAttribute($date) {
         $this->attributes['start_date'] = Carbon::createFromFormat('Y-m-d', $date);

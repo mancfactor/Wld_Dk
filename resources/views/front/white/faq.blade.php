@@ -9,8 +9,7 @@
                     <div class="row">
                         <p><b>I'm not great at drawing. How can I contextualize my idea for my piece?</b>
                         <ul>
-                            <li>Get creative! We need a visual of the piece you're presenting, so feel free to use photoshop, collages or anything else that can tell us exactly what you want your piece to look like.</li>
-                            <li>Or get in touch with other contestants to collaborate.</li>
+                            <li>Get creative! We need a visual of the piece you're presenting, so feel free to use photoshop, collages or anything else that can tell us exactly what you want your piece to look like. Or get in touch with other contestants to collaborate.</li>
                         </ul>
                         </p>
                         <p>

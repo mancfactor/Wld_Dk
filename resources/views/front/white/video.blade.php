@@ -1,3 +1,4 @@
+<h2 class="theme coll-heading">{{ $contest->video_heading}}</h2>
 <div id="shopify-section-index-background-video" class="shopify-section featured-video-section">             
   <!-- Video -->
     <style>
@@ -16,16 +17,28 @@
     }
     </style>
     <div class="iframe-container" id="youtube-index-container">
-        <iframe src="https://www.youtube-nocookie.com/embed/R2SPzHIpDl4?autoplay=1&showinfo=0&rel=0&color=white"  frameborder="0"></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ $contest->video_link}}?autoplay=1&showinfo=0&rel=0&color=white"  frameborder="0"></iframe>
     </div>    
     <div id="button-row">
         <p style="text-align:center; padding: 20px;">
-            <a href="#rules" class="btn btn--large btn--secondary btn--neutral caps">Rules & Eligibility</a>
-            <a href="#prizes" class="btn btn--large btn--secondary btn--neutral caps">Prizes</a>
-            <a href="#howtoenter" class="btn btn--large btn--secondary btn--neutral caps">How To Enter</a>
-            <a href="#faq" class="btn btn--large btn--secondary btn--neutral caps">FAQ</a>
-            <a href="/featured" class="btn btn--large btn--secondary btn--neutral caps">Featured Entires</a>
-            <a href="/enter-contest" class="btn btn--large btn--secondary btn--neutral caps">ENTER</a>
+            @if(!empty($contest->button1_text))
+                <a href="{{$contest->button1_link}}" class="btn btn--large btn--secondary btn--neutral caps">{{$contest->button1_text}}</a>
+            @endif
+            @if(!empty($contest->button2_text))
+                <a href="{{$contest->button2_link}}" class="btn btn--large btn--secondary btn--neutral caps">{{$contest->button2_text}}</a>
+            @endif
+            @if(!empty($contest->button3_text))
+                <a href="{{$contest->button3_link}}" class="btn btn--large btn--secondary btn--neutral caps">{{$contest->button3_text}}</a>
+            @endif
+            @if(!empty($contest->button4_text))
+                <a href="{{$contest->button4_link}}" class="btn btn--large btn--secondary btn--neutral caps">{{$contest->button4_text}}</a>
+            @endif
+            @if(!empty($contest->button5_text))
+                <a href="{{$contest->button5_link}}" class="btn btn--large btn--secondary btn--neutral caps">{{$contest->button5_text}}</a>
+            @endif
+            @if(!empty($contest->button6_text))
+                <a href="{{$contest->button6_link}}" class="btn btn--large btn--secondary btn--neutral caps">{{$contest->button6_text}}</a>
+            @endif
         </p>
     </div>   
 </div>

@@ -10,7 +10,7 @@
         </small>
     </nav>
 </div>
-<h2 class="theme coll-heading">WITH LOVE DARLING + COMIC RELIEF DESIGN CONTEST</h2>
+<h2 class="theme coll-heading">{{ $contest->contest_heading}}</h2>
 <div id="shopify-section-index-image-with-text" class="shopify-section">
     <!-- /sections/index-image-with-text.liquid -->
     <style>
@@ -131,24 +131,33 @@
             </div>
             <div class="image-with-text__text js-overflow-container" style="min-height: 331px;">
                 <div class="image-with-text__inner js-overflow-content">
-                    <p style="text-align:center;font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:36px;">DESIGN A PIECE WITH PURPOSE</p>
+                    <p style="text-align:center;font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:36px;">{{ $contest->slogan}}</p>
                     <p></p>
                     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 80%;" />
                     <p style="text-align:center;font-size:20px;">Here's how</p>
                     <p style="text-align:center;font-weight:bold;"><span style="font-size:68px;">1</span>
-                        <br /><span style="font-size:28px;">Express yourself.</span></p>
-                    <p style="text-align:center;font-size:18px;">Unleash your creativity to draw a timeless piece of jewellery.
-                        <br />Upload your design.</p>
+                        <br /><span style="font-size:28px;">{{ $contest->step1_title}}</span></p>
+                    <p style="text-align:center;font-size:18px;">
+                    @foreach ( explode('/',$contest->step1_body) as $body)
+                        {{ $body }}<br/>
+                    @endforeach
+                    </p>
                     <br />
                     <p style="text-align:center;font-weight:bold;"><span style="font-size:68px;">2</span>
-                        <br /><span style="font-size:28px;">Vote for your favourite.</span></p>
-                    <p style="text-align:center;font-size:18px;">This is an open creative experience.
-                        <br />Anyone can vote on the submissions.</p>
+                        <br /><span style="font-size:28px;">{{ $contest->step2_title}}</span></p>
+                    <p style="text-align:center;font-size:18px;">
+                        @foreach ( explode('/',$contest->step2_body) as $body)
+                            {{ $body }}<br/>
+                        @endforeach
+                    </p>
                     <br />
                     <p style="text-align:center;font-weight:bold;"><span style="font-size:68px;">3</span>
-                        <br /><span style="font-size:28px;">A special piece brought to life.</span></p>
-                    <p style="text-align:center;font-size:18px;">The winning design will be produced by With Love Darling.
-                        <br/>Designers will recieve a portion of the sales and be featured by With Love Darling and Red Nose Day.</p>
+                        <br /><span style="font-size:28px;">{{ $contest->step3_title}}</span></p>
+                    <p style="text-align:center;font-size:18px;"> 
+                        @foreach ( explode('/',$contest->step3_body) as $body)
+                            {{ $body }}<br/>
+                        @endforeach
+                    </p>
                     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 80%;" />
                     <p style="text-align: center;font-size:28px;font-weight:bold;">Enter by {{ $contest->getSubmitDateText() }}</p>
                     <p style="text-align: center;">

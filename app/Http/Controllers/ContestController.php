@@ -88,8 +88,12 @@ class ContestController extends Controller
         } catch (Exception $e) {
             abort(404);
         }        
-        
-        $contest->update($request->all());
+
+        $data = $request->all();
+        if(is_null($data['steps_media_id']) || !($data['steps_media_id'])) {
+            $data['steps_media_id'] = null;
+        }
+        $contest->update($data);
         $contest->tags()->sync($request->input('tags'));
         
         return redirect('contests');

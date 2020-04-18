@@ -38,6 +38,7 @@
     @else
     <link href="//cdn.shopify.com/s/files/1/1008/7192/t/15/assets/theme.scss.css?481" rel="stylesheet" type="text/css" media="all" />
     @endif
+    
 
     <script>
         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');

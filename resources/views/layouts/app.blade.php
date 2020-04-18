@@ -84,10 +84,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <!--<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
     <script src="https://kit.fontawesome.com/247c0fddd6.js"></script>
-    <script src="{{ asset('js/share.js') }}"></script>
     <script>
         $('div.alert').delay(3000).slideUp(300);
     </script>

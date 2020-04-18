@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use App\Http\Requests\EntryRequest;
 use App\Tag;
 use Jorenvh\Share\Share;
+use Exception;
 
 class EntryController extends Controller
 {
