@@ -13,7 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    
+                    <div class="row links panel-heading">
+                        <a href="{{ url('/admin/site-media')}}">Site Media</a>
+                    </div>
                     <div class="row links panel-heading">
                         <a href="{{ url('contests')}}">Contests</a>
                     </div>

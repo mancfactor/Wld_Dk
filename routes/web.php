@@ -53,6 +53,11 @@ Route::get('tags/{tags}', 'TagController@show');
 
 Route::get('/logout', 'ContestsController@logout');
 
+Route::get('admin/site-media/add', 'ContestController@addMedia');
+Route::patch('contest/update-media/{contest}', 'ContestController@updateMedia');
+Route::get('/admin/site-media','ContestController@siteMedia');
+
+
 /* Examples 
 
 // Old view
