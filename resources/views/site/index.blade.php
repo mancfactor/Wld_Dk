@@ -3,6 +3,7 @@
 @section('content')
 <h1>Site Media</h1>
 <hr>
+
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -13,17 +14,18 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($contest->getMedia('site') as $media)
+        @foreach($site->getMedia('site') as $media)
         <tr>
             <td>{{$media->id}}</td>
             <td><img src="{{ $media->getUrl('thumb') }}"></td>
             <td>{{$media->name }}</td>
             <td>{{$media->file_name }}</td>
         </tr>
-    @endforeach
+        @endforeach
     </tbody>
 </table>
-{!! Form::model($contest, ['method' => 'GET', 'action' => 'ContestController@addMedia']) !!}
+
+{!! Form::model($site, ['method' => 'GET', 'action' => 'SiteController@addMedia']) !!}
 <div class="form-group">
     {!! Form::submit('Add Site Media', ['class'=>'btn btn-primary form-control']) !!} 
 </div>

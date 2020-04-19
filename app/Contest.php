@@ -192,6 +192,10 @@ use Spatie\MediaLibrary\Models\Media;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest wherePrizeVotingTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereRulesBody($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest whereRulesTitle($value)
+ * @property string|null $prize_body
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\MediaLibrary\Models\Media[] $media
+ * @property-read int|null $media_count
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest wherePrizeBody($value)
  */
 class Contest extends Model implements HasMedia
 {

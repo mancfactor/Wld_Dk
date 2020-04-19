@@ -7,7 +7,7 @@
         <br />
         <p>Upload an image to be used on the site.</p>
         <br />
-        {!! Form::model($contest, ['method' => 'PATCH', 'enctype' => 'multipart/form-data', 'action' => ['ContestController@updateMedia',$contest->id]]) !!}
+        {!! Form::model($site, ['method' => 'PATCH', 'enctype' => 'multipart/form-data', 'action' => ['SiteController@updateMedia',$site->id]]) !!}
         
         <div class="form-group">
             {!! Form::label('media', 'Upload Image:') !!} 

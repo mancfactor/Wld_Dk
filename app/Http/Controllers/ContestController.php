@@ -105,48 +105,5 @@ class ContestController extends Controller
         
         return redirect('contests');
     }
-
-    public function addMedia() {
-        try{
-            $contest = Contest::findOrFail(1);
-        } catch (Exception $e) {
-            abort(404);
-        }        
-        
-        return view('contests.addmedia')->with('contest',$contest);
-    }
-
-    public function updateMedia($id, Request $request) {
-        
-        $data = $request->all();
-       
-        try{
-            $contest = Contest::findOrFail($id);
-        } catch (Exception $e) {
-            abort(404);
-        }        
-        
-        if (isset($data['media'])) {
-              if($data['media']->getError() != 1) {
-		        $contest->addMediaFromRequest('media')->toMediaCollection('site');
-        	} else {
-		        flash()->error('Media not valid');
-            }
-        }
-        
-        return redirect('/admin/site-media');
-    }
-
-
-    public function siteMedia() {
-        
-        try{
-            $contest = Contest::findOrFail(1);
-        } catch (Exception $e) {
-            abort(404);
-        }        
- 
-        return view('contests.mediaindex')->with('contest',$contest);
-    }
     
 }
