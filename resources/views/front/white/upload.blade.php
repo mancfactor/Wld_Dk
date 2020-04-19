@@ -42,7 +42,7 @@
         }
     </style>
 
-    <section class="index-double js-overflow-container image-with-text-section colors-index-image-with-text screen-height-one-half " data-section-id="index-image-with-text" data-section-type="image-with-text" id="FeaturedImage-index-image-with-text" style="min-height: 331px;">
+    <section class="index-double js-overflow-container image-with-text-section colors-index-image-with-text screen-height-one-half " data-section-id="index-image-with-text" data-section-type="image-with-text" id="FeaturedImage-index-image-with-text" style="height:400px;">
         <div class="image-with-text-wrapper js-overflow-container  image-with-text-wrapper--natural" style="min-height: 332px;">
         <div class="image-with-text__image">
                 <div class="image-with-text__image-img lazyloaded" data-bgset="/images/upload_pic_{width}.jpg" data-widths="[180, 360, 540, 720, 800, 900, 1080, 1296, 1512, 1728, 1950,]" data-aspectratio="0.85" style="background-image: url(&quot;/images/upload_pic_900.jpg&quot;);">
@@ -98,16 +98,12 @@
             <div class="image-with-text__text js-overflow-container" style="min-height: 331px;">
                 <div class="image-with-text__inner js-overflow-content">
                     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 70%;" />
-                    <p style="text-align:center;font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:36px;">
-                        @foreach ( explode('/',$contest->intro_body3) as $body)
-                            {{ $body }}<br/>
-                        @endforeach
-                    </p>
+                    <p style="text-align:center;font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:36px;">{!! $contest->intro_body3 !!}</p>
                     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 70%;" />
                     <p><br /></p>
                     <p></p>
                     <p style="text-align: center;">
-                        <a class="btn btn--large btn--secondary btn--neutral caps" href="{{ $contest->intro_button2_link }}">
+                        <a class="btn btn--large btn--secondary btn--neutral caps" href="{{ $contest->intro_button2_text }}">
                             <span class="tiny">{{ $contest->intro_button2_text }}</span>
                         </a>
                     </p>

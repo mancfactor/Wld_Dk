@@ -137,26 +137,16 @@
                     <p style="text-align:center;font-size:20px;">Here's how</p>
                     <p style="text-align:center;font-weight:bold;"><span style="font-size:68px;">1</span>
                         <br /><span style="font-size:28px;">{{ $contest->step1_title}}</span></p>
-                    <p style="text-align:center;font-size:18px;">
-                    @foreach ( explode('/',$contest->step1_body) as $body)
-                        {{ $body }}<br/>
-                    @endforeach
-                    </p>
+                    <p style="text-align:center;font-size:18px;">{!! $contest->step1_body !!}</p>
                     <br />
                     <p style="text-align:center;font-weight:bold;"><span style="font-size:68px;">2</span>
                         <br /><span style="font-size:28px;">{{ $contest->step2_title}}</span></p>
-                    <p style="text-align:center;font-size:18px;">
-                        @foreach ( explode('/',$contest->step2_body) as $body)
-                            {{ $body }}<br/>
-                        @endforeach
+                    <p style="text-align:center;font-size:18px;">{!! $contest->step2_body !!}
                     </p>
                     <br />
                     <p style="text-align:center;font-weight:bold;"><span style="font-size:68px;">3</span>
                         <br /><span style="font-size:28px;">{{ $contest->step3_title}}</span></p>
-                    <p style="text-align:center;font-size:18px;"> 
-                        @foreach ( explode('/',$contest->step3_body) as $body)
-                            {{ $body }}<br/>
-                        @endforeach
+                    <p style="text-align:center;font-size:18px;">{!! $contest->step3_body !!}
                     </p>
                     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 80%;" />
                     <p style="text-align: center;font-size:28px;font-weight:bold;">Enter by {{ $contest->getSubmitDateText() }}</p>

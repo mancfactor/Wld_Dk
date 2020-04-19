@@ -26,12 +26,9 @@ class ContestRequest extends FormRequest
         return [
             'name' => 'required|min:5',
             'slogan' => 'required|min:10',
-            'description' => 'required|min:10',
             'start_date' => 'required|date',
             'end_date' => 'required|date',
-            'how_it_work' => 'required',
-            'rule' => 'required',
-            'prize' => 'required',
+            
         ];
     }
 }

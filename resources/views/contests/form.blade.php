@@ -30,10 +30,6 @@ $table->string('contest_heading', 100);
     {!! Form::text('menu_title', null, ['class'=>'form-control', 'placeholder' => 'Title in the nav menu','maxlength' => 50 ]) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('description', 'Description:') !!} 
-    {!! Form::textarea('description', null, ['class'=>'form-control']) !!}
-</div>
-<div class="form-group">
     {!! Form::label('active', 'Active:') !!} 
     {!! Form::radio('active', 1, true, ['class'=>'']) !!} Yes
     {!! Form::radio('active', 0, false, ['class'=>'']) !!} No
@@ -59,47 +55,33 @@ $table->string('contest_heading', 100);
     {!! Form::text('hashtag', null, ['class'=>'form-control', 'placeholder' => 'Hashtag for social shares','maxlength' => 30 ]) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('how_it_work', 'How It Works:') !!} 
-    {!! Form::textarea('how_it_work', null, ['class'=>'form-control']) !!}
-</div>
-<div class="form-group">
-    {!! Form::label('rule', 'Rules:') !!} 
-    {!! Form::textarea('rule', null, ['class'=>'form-control']) !!}
-</div>
-<div class="form-group">
-    {!! Form::label('prize', 'Prizes:') !!} 
-    {!! Form::textarea('prize', null, ['class'=>'form-control']) !!}
-</div>
-<div class="form-group">
     {!! Form::label('step1_title', 'Step 1 Title:  (50 chars max)') !!} 
     {!! Form::text('step1_title', null, ['class'=>'form-control', 'placeholder' => 'Step 1 Title','maxlength' => 50 ]) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('step1_body', 'Step 1 Body:  (250 chars max, / to start a new line )') !!} 
-    {!! Form::text('step1_body', null, ['class' => 'form-control', 'placeholder' => 'Step 1 Body','maxlength' => 250 ]) !!}
+    {!! Form::label('step1_body', 'Step 1 Body:  (250 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('step1_body', null, ['class'=>'form-control','placeholder' => 'Step 1 Body', 'maxlength'=>250, 'rows' => 2]) !!}
 </div> 
 <div class="form-group">
     {!! Form::label('step2_title', 'Step 2 Title:  (50 chars max)') !!} 
     {!! Form::text('step2_title', null, ['class'=>'form-control', 'placeholder' => 'Step 2 Title','maxlength' => 50 ]) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('step2_body', 'Step 2 Body:  (250 chars max, / to start a new line)') !!} 
-    {!! Form::text('step2_body', null, ['class' => 'form-control', 'placeholder' => 'Step 2 Body','maxlength' => 250 ]) !!}
+    {!! Form::label('step2_body', 'Step 2 Body:  (250 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a> 
+    {!! Form::textarea('step2_body', null, ['class'=>'form-control','placeholder' => 'Step 2 Body', 'maxlength'=>250, 'rows' => 2]) !!}
 </div> 
 <div class="form-group">
     {!! Form::label('step3_title', 'Step 3 Title:  (50 chars max)') !!} 
     {!! Form::text('step3_title', null, ['class'=>'form-control', 'placeholder' => 'Step 3 Title','maxlength' => 50 ]) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('step3_body', 'Step 3 Body:  (250 chars max, / to start a new line)') !!} 
-    {!! Form::text('step3_body', null, ['class' => 'form-control', 'placeholder' => 'Step 3 Body','maxlength' => 250 ]) !!}
+    {!! Form::label('step3_body', 'Step 3 Body:  (250 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('step3_body', null, ['class'=>'form-control','placeholder' => 'Step 3 Body', 'maxlength'=>250, 'rows' => 2]) !!}
 </div>
-
 <div class="form-group">
     {!! Form::label('steps_media_id', 'Steps Image:') !!} 
     {!! Form::select('steps_media_id', [0 => 'Select an image'] , $tagsDefault, ['class'=>'form-control', 'id'=>'steps_media_id']) !!}
 </div> 
-
 <div class="form-group">
     {!! Form::label('video_heading', 'Video Heading: (100 chars max)') !!} 
     {!! Form::text('video_heading', null, ['class' => 'form-control', 'placeholder' => 'Title for the Video Section','maxlength' => 100 ]) !!}
@@ -158,12 +140,12 @@ $table->string('contest_heading', 100);
 </div>
 
 <div class="form-group">
-    {!! Form::label('intro_body1', 'Intro Body 1:  (250 chars max, / to start a new line)') !!} 
-    {!! Form::text('intro_body1', null, ['class' => 'form-control', 'placeholder' => 'Intro Body 1','maxlength' => 250 ]) !!}
+    {!! Form::label('intro_body1', 'Intro Body 1:  (250 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('intro_body1', null, ['class'=>'form-control','placeholder' => 'Intro Body 1', 'maxlength'=>250, 'rows' => 3]) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('intro_body2', 'Intro Body 2:  (250 chars max, / to start a new line)') !!} 
-    {!! Form::text('intro_body2', null, ['class' => 'form-control', 'placeholder' => 'Intro Body 2','maxlength' => 250 ]) !!}
+    {!! Form::label('intro_body2', 'Intro Body 2:  (250 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('intro_body2', null, ['class'=>'form-control','placeholder' => 'Intro Body 2', 'maxlength'=>250, 'rows' => 3]) !!}
 </div>
 
 <div class="form-group">
@@ -183,8 +165,8 @@ $table->string('contest_heading', 100);
     {!! Form::select('intro_media2_id', [0 => 'Select an image'] , $tagsDefault, ['class'=>'form-control', 'id'=>'intro_media2_id']) !!}
 </div> 
 <div class="form-group">
-    {!! Form::label('intro_body3', 'Intro Body 3:  (250 chars max, / to start a new line)') !!} 
-    {!! Form::text('intro_body3', null, ['class' => 'form-control', 'placeholder' => 'Intro Body 3','maxlength' => 250 ]) !!}
+    {!! Form::label('intro_body3', 'Intro Body 3:  (250 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('intro_body3', null, ['class'=>'form-control','placeholder' => 'Intro Body 3', 'maxlength'=>250, 'rows' => 3]) !!}
 </div>
 <div class="form-group">
     {!! Form::label('intro_button2_text', 'Intro Button 2 Text:  (50 chars max, leave blank to not display)') !!} 
@@ -195,6 +177,38 @@ $table->string('contest_heading', 100);
     {!! Form::text('intro_button2_link', null, ['class'=>'form-control', 'placeholder' => 'intro button 2 link','maxlength' => 50 ]) !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('how_title', 'How To Enter Title:  (50 chars)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::text('how_title', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('how_body', 'How To Enter Intro Body:  (800 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('how_body', null, ['class'=>'form-control', 'maxlength'=>800, 'rows' => 6]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('how_step1_title', 'How To Enter Step 1 Title:  (50 chars max)') !!} 
+    {!! Form::text('how_step1_title', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Step 1 Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('how_step1_body', 'How To Enter Step 1 Body:  (800 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('how_step1_body', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Step 1 Body','maxlength'=>800, 'rows' => 6]) !!}
+</div> 
+<div class="form-group">
+    {!! Form::label('how_step2_title', 'How To Enter Step 2 Title:  (50 chars max)') !!} 
+    {!! Form::text('how_step2_title', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Step 2 Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('how_step2_body', 'How To Enter Step 2 Body:  (800 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('how_step2_body', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Step 2 Body', 'maxlength'=>800, 'rows' => 6]) !!}
+</div> 
+<div class="form-group">
+    {!! Form::label('how_step3_title', 'How To Enter Step 3 Title:  (50 chars max)') !!} 
+    {!! Form::text('how_step3_title', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Step 3 Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('how_step3_body', 'How To Enter Step 3 Body:  (800 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('how_step3_body', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Step 3 Body', 'maxlength'=>800, 'rows' => 6]) !!}
+</div>
 
 <div class="form-group">
     {!! Form::label('tags', 'Tags:') !!} 
@@ -203,6 +217,31 @@ $table->string('contest_heading', 100);
             
 <div class="form-group">
     {!! Form::submit($submitButtonText, ['class'=>'btn btn-primary form-control']) !!} 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="cheatsheet" tabindex="-1" role="dialog" aria-labelledby="cheatsheetLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="acheatsheet">Markup Cheatsheet</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    Use <b>&lt;br&gt;</b> to start a new line <br /><br />
+                    Use <b>&lt;li&gt;</b><b>&lt;/li&gt;</b> for bulleted line<br /> 
+                    ie. <b>&lt;li&gt;</b><i>example bulleted line</i><b>&lt;/li&gt;</b> becomes: <ul style="list-style-type: disc;margin-left:20px;"><li>example bulleted line</li></ul><br />
+                    Use <b>&lt;b&gt;</b><b>&lt;/b&gt;</b> for bold<br />
+                    ie. <b>&lt;b&gt;</b><i>example text</i><b>&lt;/b&gt;</b> becomes: <b>example text</b> <br /><br />
+                    Use <b>&lt;a href="</b><i>Url</i><b>" target="_blank"&gt;</b><i>Link Text</i><b>&lt;/a&gt;</b> for links to other websites <br />
+                    i.e. <b>&lt;a href="</b>https://google.com<b>" target="_blank"&gt;</b>Google<b>&lt;/a&gt;</b> becomes: <a href="https://google.com" target="_blank">Google</a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section('footer')

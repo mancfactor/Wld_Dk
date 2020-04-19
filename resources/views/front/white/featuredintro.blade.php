@@ -20,17 +20,9 @@
     <div class="image-with-text__text js-overflow-container" style="min-height: 559.938px;">
       <div class="image-with-text__inner js-overflow-content">
         <div class="video__description aos-init aos-animate" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <p style="padding: 20px 0px 20px 0px;line-height: 2em;">
-              @foreach ( explode('/',$contest->intro_body1) as $body)
-                {{ $body }}<br/>
-              @endforeach
-            </p>
+            <p style="padding: 20px 0px 20px 0px;line-height: 2em;">{!! $contest->intro_body1 !!}</p>
             <hr style="border: 1px solid #354863;width: 50%;margin:auto;height:0;" />
-            <p style="padding: 20px 0px 20px 0px;line-height: 2em;">
-              @foreach ( explode('/',$contest->intro_body2) as $body)
-                {{ $body }}<br/>
-              @endforeach
-            </p>
+            <p style="padding: 20px 0px 20px 0px;line-height: 2em;">{!! $contest->intro_body2 !!}</p>
                
 <p><a href="{{ $contest->intro_button1_link }}" class="btn btn--large btn--secondary btn--neutral caps" title="Desgin Contest Featured Entires">{{ $contest->intro_button1_text }}</a></p></div>
         
