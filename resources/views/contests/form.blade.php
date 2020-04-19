@@ -209,6 +209,126 @@ $table->string('contest_heading', 100);
     {!! Form::label('how_step3_body', 'How To Enter Step 3 Body:  (800 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
     {!! Form::textarea('how_step3_body', null, ['class'=>'form-control', 'placeholder' => 'How To Enter Step 3 Body', 'maxlength'=>800, 'rows' => 6]) !!}
 </div>
+<div class="form-group">
+    {!! Form::label('rules_title', 'Rules Title:  (50 chars max)') !!} 
+    {!! Form::text('rules_title', null, ['class'=>'form-control', 'placeholder' => 'Rules Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('rules_body', 'Rules Body:  (800 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('rules_body', null, ['class'=>'form-control', 'placeholder' => 'Rules Body', 'rows' => 10]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_heading', 'Prizes Heading:  (50 chars max)') !!} 
+    {!! Form::text('prize_heading', null, ['class'=>'form-control', 'placeholder' => 'Prizes Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_title', 'Prizes Title:  (100 chars max)') !!} 
+    {!! Form::text('prize_title', null, ['class'=>'form-control', 'placeholder' => 'Prizes Title','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_body', 'Prizes Body:  (100 chars max)') !!} 
+    {!! Form::text('prize_body', null, ['class'=>'form-control', 'placeholder' => 'Prize Body','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_first_title', '1st Prize Title:  (50 chars max)') !!} 
+    {!! Form::text('prize_first_title', null, ['class'=>'form-control', 'placeholder' => '1st Prize Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_first_body', '1st Prize Body:  (100 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::text('prize_first_body', null, ['class'=>'form-control', 'placeholder' => '1st Prize Body','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_second_title', '2nd Prize Title:  (50 chars max)') !!} 
+    {!! Form::text('prize_second_title', null, ['class'=>'form-control', 'placeholder' => '2nd Prize Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_second_body', '2nd Prize Body:  (100 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::text('prize_second_body', null, ['class'=>'form-control', 'placeholder' => '2nd Prize Body','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_third_title', '3rd Prize Title:  (50 chars max)') !!} 
+    {!! Form::text('prize_third_title', null, ['class'=>'form-control', 'placeholder' => '3rd Prize Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_third_body', '3rd Prize Body:  (100 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::text('prize_third_body', null, ['class'=>'form-control', 'placeholder' => '3rd Prize Body','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_special_title', 'Special Prize Title:  (50 chars max)') !!} 
+    {!! Form::text('prize_special_title', null, ['class'=>'form-control', 'placeholder' => 'Special Prize Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_special_body', 'Special Prize Body:  (350 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('prize_special_body', null, ['class'=>'form-control', 'placeholder' => 'Special Prize Body','maxlength' => 350 , 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_voting_title', 'Voting Prize Title:  (50 chars max)') !!} 
+    {!! Form::text('prize_voting_title', null, ['class'=>'form-control', 'placeholder' => 'Voting Prize Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_voting_body', 'Voting Prize Body:  (350 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('prize_voting_body', null, ['class'=>'form-control', 'placeholder' => 'Voting Prize Body','maxlength' => 350 , 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_elgible_title', 'Elgible Prize Title:  (50 chars max)') !!} 
+    {!! Form::text('prize_elgible_title', null, ['class'=>'form-control', 'placeholder' => 'Elgible Prize Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_elgible_body', 'Elgible Prize Body:  (350 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('prize_elgible_body', null, ['class'=>'form-control', 'placeholder' => 'Elgible Prize Body','maxlength' => 350 , 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_commission_title', 'Prize Commission Title:  (50 chars max)') !!} 
+    {!! Form::text('prize_commission_title', null, ['class'=>'form-control', 'placeholder' => 'Prize Commission Title','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('prize_commission_body', 'Prize Commission Body:  (350 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('prize_commission_body', null, ['class'=>'form-control', 'placeholder' => 'Prize Commission Body','maxlength' => 350 , 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_heading', 'FAQ Heading:  (50 chars max)') !!} 
+    {!! Form::text('faq_heading', null, ['class'=>'form-control', 'placeholder' => 'FAQ Heading','maxlength' => 50 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa1_title', 'FAQ Q1 Title:  (100 chars max)') !!} 
+    {!! Form::text('faq_qa1_title', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q1 Title','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa1_body', 'FAQ Q1 Answer:  (300 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('faq_qa1_body', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q1 Answery', 'maxlength'=>300, 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa2_title', 'FAQ Q2 Title:  (100 chars max)') !!} 
+    {!! Form::text('faq_qa2_title', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q2 Title','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa2_body', 'FAQ Q2 Answer:  (300 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('faq_qa2_body', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q2 Answery', 'maxlength'=>300, 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa3_title', 'FAQ Q3 Title:  (100 chars max)') !!} 
+    {!! Form::text('faq_qa3_title', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q3 Title','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa3_body', 'FAQ Q3 Answer:  (300 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('faq_qa3_body', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q3 Answery', 'maxlength'=>300, 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa4_title', 'FAQ Q4 Title:  (100 chars max)') !!} 
+    {!! Form::text('faq_qa4_title', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q4 Title','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa4_body', 'FAQ Q4 Answer:  (300 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('faq_qa4_body', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q4 Answery', 'maxlength'=>300, 'rows' => 3]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa5_title', 'FAQ Q5 Title:  (100 chars max)') !!} 
+    {!! Form::text('faq_qa5_title', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q5 Title','maxlength' => 100 ]) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('faq_qa5_body', 'FAQ Q5 Answer:  (300 chars max)') !!}  <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>
+    {!! Form::textarea('faq_qa5_body', null, ['class'=>'form-control', 'placeholder' => 'FAQ Q5 Answery', 'maxlength'=>300, 'rows' => 3]) !!}
+</div>
 
 <div class="form-group">
     {!! Form::label('tags', 'Tags:') !!} 
