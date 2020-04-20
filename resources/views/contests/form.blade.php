@@ -80,7 +80,7 @@ $table->string('contest_heading', 100);
 </div>
 <div class="form-group">
     {!! Form::label('steps_media_id', 'Steps Image:') !!} 
-    {!! Form::select('steps_media_id', [0 => 'Select an image'] , $tagsDefault, ['class'=>'form-control', 'id'=>'steps_media_id']) !!}
+    {!! Form::select('steps_media_id', $mediaOptions, $contest->steps_media_id, ['class'=>'form-control', 'id'=>'steps_media_id']) !!}
 </div> 
 <div class="form-group">
     {!! Form::label('video_heading', 'Video Heading: (100 chars max)') !!} 
@@ -158,11 +158,11 @@ $table->string('contest_heading', 100);
 </div>
 <div class="form-group">
     {!! Form::label('intro_media1_id', 'Intro Image 1 (top right):') !!} 
-    {!! Form::select('intro_media1_id', [0 => 'Select an image'] , $tagsDefault, ['class'=>'form-control', 'id'=>'intro_media1_id']) !!}
+    {!! Form::select('intro_media1_id', $mediaOptions, $contest->intro_media1_id, ['class'=>'form-control', 'id'=>'intro_media1_id']) !!}
 </div> 
 <div class="form-group">
     {!! Form::label('intro_media2_id', 'Intro Image 2 (bottom left):') !!} 
-    {!! Form::select('intro_media2_id', [0 => 'Select an image'] , $tagsDefault, ['class'=>'form-control', 'id'=>'intro_media2_id']) !!}
+    {!! Form::select('intro_media2_id', $mediaOptions, $contest->intro_media2_id, ['class'=>'form-control', 'id'=>'intro_media2_id']) !!}
 </div> 
 <div class="form-group">
     {!! Form::label('intro_body3', 'Intro Body 3:  (250 chars max)') !!} <a href="#" onclick="$('#cheatsheet').modal('show');">Markup Cheatsheet</a>

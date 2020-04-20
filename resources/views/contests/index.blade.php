@@ -31,4 +31,10 @@
     @endforeach
     </tbody>
 </table>
+
+{!! Form::open(['method' => 'GET', 'action' => 'ContestController@create']) !!}
+<div class="form-group">
+    {!! Form::submit('Add Contest', ['class'=>'btn btn-primary form-control']) !!} 
+</div>
+{!! Form::close() !!}
 @endsection

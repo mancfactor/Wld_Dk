@@ -4,9 +4,6 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
-use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
-use Spatie\MediaLibrary\HasMedia\HasMedia; 
-use Spatie\MediaLibrary\Models\Media;
 
 /**
  * App\Contest
@@ -197,9 +194,8 @@ use Spatie\MediaLibrary\Models\Media;
  * @property-read int|null $media_count
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Contest wherePrizeBody($value)
  */
-class Contest extends Model implements HasMedia
+class Contest extends Model
 {
-    use HasMediaTrait;
 
     // enable mass-assignment of fields
     protected $fillable = [ 'name','slogan','description','active','start_date','submit_date','vote_date','end_date','hashtag','how_it_work','rule','prize','contest_heading','menu_title','steps_media_id','step1_title','step1_body','step2_title','step2_body','step3_title','step3_body','video_heading','video_link','button1_text','button1_link','button2_text','button2_link','button3_text','button3_link','button4_text','button4_link','button5_text','button5_link','button6_text','button6_link','intro_media1_id','intro_body1','intro_body2','intro_button1_text'
@@ -287,37 +283,5 @@ class Contest extends Model implements HasMedia
      */
     public function entries() {
         return $this->hasMany('App\Entry');
-    }
-    
-    public function registerMediaConversions(Media $media = null)
-    {
-
-        $this->addMediaConversion('responsive')
-            ->withResponsiveImages();
-
-        $this->addMediaConversion('thumb')
-            ->width(200)
-            ->height(200);
-            
-        $this->addMediaConversion('_180')
-        ->width(180);
-        $this->addMediaConversion('_360')
-        ->width(360);
-        $this->addMediaConversion('_540')
-        ->width(540);
-        $this->addMediaConversion('_720')
-        ->width(720);
-        $this->addMediaConversion('_900')
-        ->width(900);
-        $this->addMediaConversion('_1080')
-        ->width(1080);
-        $this->addMediaConversion('_1296')
-        ->width(1296);
-        $this->addMediaConversion('_1512')
-        ->width(1512);
-        $this->addMediaConversion('_1728')
-        ->width(1728);
-        $this->addMediaConversion('_2048')
-        ->width(2048);
     }
 }

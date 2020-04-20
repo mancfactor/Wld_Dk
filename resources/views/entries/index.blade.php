@@ -32,4 +32,10 @@
         </tbody>
     </table>
 
+    {!! Form::open(['method' => 'GET', 'action' => 'EntryController@create']) !!}
+    <div class="form-group">
+        {!! Form::submit('Add Entry', ['class'=>'btn btn-primary form-control']) !!} 
+    </div>
+    {!! Form::close() !!}
+    
 @endsection
