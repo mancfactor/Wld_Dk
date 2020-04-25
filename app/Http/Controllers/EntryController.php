@@ -19,7 +19,7 @@ class EntryController extends Controller
     }
     
     public function index() {
-        $entries = Entry::all();
+        $entries = Entry::paginate(10);
 
         return view('entries.index')->with('entries',$entries);
     }

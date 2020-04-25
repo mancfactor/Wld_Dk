@@ -31,12 +31,12 @@
 						</div>
 						<div class="t-p-4">
 							<div class="t-flex t-justify-between t-items-center ">
-								<div class="t-text-xs xl:t-text-base t-w-1/6 "><a href="/comments/{{$entry->id}}">Comments <br / >({{ count($entry->comments()->get())}})</a></div> 
+								<div class="t-text-xs xl:t-text-base t-w-1/6 "><a href="/product/{{$entry->id}}#comments">Comments <br / >({{ count($entry->comments()->get())}})</a></div> 
 								<div class="t-flex-none t-w-2/3">
 									<h4 class="t-text-xs xl:t-text-2xl t-font-bold t-m-0 t-leading-tight">{{$entry->name}}</h4>
 									<div class="t-text-xs xl:t-text-base t-uppercase t-font-semibold t-tracking-wide t-text-gray-600">By {{ $entry->designer}}</div>
 								</div>
-								<div class="t-text-xs xl:t-text-base t-w-1/6"><a href="/vote/{{$entry->id}}">Votes <br / >({{ count($entry->voters()->get())}})</a></div>
+								<div class="t-text-xs xl:t-text-base t-w-1/6"><a href="/product/{{$entry->id}}#votes">Votes <br / >({{ count($entry->voters()->get())}})</a></div>
 							</div>
 						</div>
 					</a>

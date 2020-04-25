@@ -1,6 +1,6 @@
 <div class="stepsrow wldpink">
     <div class="stepstextcolumn">
-        <div class="spacer " style="padding: 30% 0;">
+        <div class="spacer picpad" >
             <p class="t-text-sm sm:t-text-base xl:t-text-xl t-m-0 xl:t-mt-6 t-leading-10">{!! $contest->intro_body1 !!}</p>
             <hr class="t-m-auto t-my-5 xl:t-my-10 t-w-1/2 lg:t-w-1/3 t-border t-border-gray-400" />
             <p class="t-text-sm sm:t-text-base xl:t-text-xl t-m-0 t-leading-10">{!! $contest->intro_body2 !!}</p>

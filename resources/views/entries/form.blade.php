@@ -16,7 +16,8 @@
 </div>
 <div class="form-group">
     {!! Form::label('approved', 'Approved:') !!} 
-    {!! Form::checkbox('approved', 1, true, ['class'=>'form-control']) !!}
+    {!! Form::radio('approved', 1, true, ['class'=>'']) !!} Yes
+    {!! Form::radio('approved', 0, false, ['class'=>'']) !!} No
 </div>
 <div class="form-group">
     {!! Form::label('hashtag', 'Hashtag:') !!} 

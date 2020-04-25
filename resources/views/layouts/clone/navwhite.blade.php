@@ -74,7 +74,13 @@
                 </a>
                 <div class="main-menu-dropdown main-menu-dropdown--has-links" id="contests-1-desktop">
                     <ul>
-                        <li class="child "> <a href="/" class="nav-link"> COMIC RELIEF </a> </li>
+                        <li class="child "> <a href="/" class="nav-link t-uppercase"> 
+                            @if(!empty($contest))
+                                {{ $contest->menu_title}} 
+                            @else
+                                COMIC RELIEF
+                            @endif
+                        </a> </li>
                         <li class="child "> <a href="/featured" class="nav-link"> FEATURED </a> </li>
                     </ul>
                 </div>

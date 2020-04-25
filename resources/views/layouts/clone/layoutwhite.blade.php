@@ -65,60 +65,7 @@
     <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/10087192/digital_wallets/dialog">
     <meta name="shopify-checkout-api-token" content="431f23d8d24b3ec43d96311a981de6eb">
     <meta id="in-context-paypal-metadata" data-shop-id="10087192" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
-    <style media="all">
-        
-       .wldpink {
-            background-color: #ffe6e3; 
-        }
-
-        .stepsrow {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        /* Create four equal columns that sits next to each other */
-        .stepscolumn {
-            flex: 50%;
-            max-width: 50%;
-        }
-
-        /* Create four equal columns that sits next to each other */
-        .stepstextcolumn {
-            flex: 50%;
-            max-width: 50%;
-            padding: 0 15px;
-            text-align: center;
-        }
-        
-        .stepscolumn img {
-            vertical-align: middle;
-            width: 100%;
-        }
-
-        /* Responsive layout - makes a two column-layout instead of four columns */
-        @media screen and (max-width: 1280px) {
-            .stepscolumn {
-                flex: 50%;
-                max-width: 50%;
-            }
-            .stepstextcolumn {
-                flex: 50%;
-                max-width: 50%;
-            }
-        }
-
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 1200px) {
-            .stepscolumn {
-                flex: 100%;
-                max-width: 100%;
-            }
-            .stepstextcolumn {
-                flex: 100%;
-                max-width: 100%;
-            }
-        }
-    </style>
+    
     <script id="shopify-features" type="application/json">{"accessToken":"431f23d8d24b3ec43d96311a981de6eb","betas":[],"domain":"withlovedarling.com","predictiveSearch":true,"shopId":10087192,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
     <script>
         var Shopify = Shopify || {};
