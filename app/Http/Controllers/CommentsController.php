@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Laravelista\Comments\Comment;
+use Exception;
 
 class CommentsController extends Controller
 {

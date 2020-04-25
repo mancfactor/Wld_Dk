@@ -284,4 +284,25 @@ class Contest extends Model
     public function entries() {
         return $this->hasMany('App\Entry');
     }
+
+    /***
+     * Contest has media     
+    */
+    public function stepsMedia() {
+        return $this->belongsTo('Spatie\MediaLibrary\Models\Media');
+    }
+
+    /***
+     * Contest has media     
+    */
+    public function introMedia1() {
+        return $this->belongsTo('Spatie\MediaLibrary\Models\Media');
+    }
+
+    /***
+     * Contest has media     
+    */
+    public function introMedia2() {
+        return $this->belongsTo('Spatie\MediaLibrary\Models\Media');
+    }
 }

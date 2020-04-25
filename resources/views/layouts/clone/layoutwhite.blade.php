@@ -32,12 +32,13 @@
     @endif
     <!--<![endif]-->
     <!--[if lt IE 9]><script src="//cdn.shopify.com/s/files/1/1008/7192/t/15/assets/theme.js?481"></script><![endif]-->
-    
+    <link href="/css/front.css" rel="stylesheet" type="text/css" media="all" />
     @if($local)
     <link href="/local/css/theme.scss.css" rel="stylesheet" type="text/css" media="all" />
     @else
     <link href="//cdn.shopify.com/s/files/1/1008/7192/t/15/assets/theme.scss.css?481" rel="stylesheet" type="text/css" media="all" />
     @endif
+    
     
 
     <script>
@@ -61,150 +62,63 @@
     @endif
     <!--<![endif]-->
     <!--[if lt IE 9]><script src="//cdn.shopify.com/s/files/1/1008/7192/t/15/assets/head.js?481"></script><![endif]-->
-
-    <script>
-        window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');
-    </script>
     <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/10087192/digital_wallets/dialog">
     <meta name="shopify-checkout-api-token" content="431f23d8d24b3ec43d96311a981de6eb">
     <meta id="in-context-paypal-metadata" data-shop-id="10087192" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
     <style media="all">
-        .additional-checkout-button {
-            border: 0 !important;
-            border-radius: 5px !important;
-            display: inline-block;
-            margin: 0 0 10px;
-            padding: 0 24px !important;
-            max-width: 100%;
-            min-width: 150px !important;
-            line-height: 44px !important;
-            text-align: center !important
+        
+       .wldpink {
+            background-color: #ffe6e3; 
+        }
+
+        .stepsrow {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .stepscolumn {
+            flex: 50%;
+            max-width: 50%;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .stepstextcolumn {
+            flex: 50%;
+            max-width: 50%;
+            padding: 0 15px;
+            text-align: center;
         }
         
-        .additional-checkout-button+.additional-checkout-button {
-            margin-left: 10px
+        .stepscolumn img {
+            vertical-align: middle;
+            width: 100%;
         }
-        
-        .additional-checkout-button:last-child {
-            margin-bottom: 0
-        }
-        
-        .additional-checkout-button span {
-            font-size: 14px !important
-        }
-        
-        .additional-checkout-button img {
-            display: inline-block !important;
-            height: 1.3em !important;
-            margin: 0 !important;
-            vertical-align: middle !important;
-            width: auto !important
-        }
-        
-        @media (max-width: 500px) {
-            .additional-checkout-button {
-                display: block;
-                margin-left: 0 !important;
-                padding: 0 10px !important;
-                width: 100%
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 1280px) {
+            .stepscolumn {
+                flex: 50%;
+                max-width: 50%;
+            }
+            .stepstextcolumn {
+                flex: 50%;
+                max-width: 50%;
             }
         }
-        
-        .additional-checkout-button--apple-pay {
-            background-color: #000 !important;
-            color: #fff !important;
-            display: none;
-            font-family: -apple-system, Helvetica Neue, sans-serif !important;
-            min-width: 150px !important;
-            white-space: nowrap !important
-        }
-        
-        .additional-checkout-button--apple-pay:hover,
-        .additional-checkout-button--apple-pay:active,
-        .additional-checkout-button--apple-pay:visited {
-            color: #fff !important;
-            text-decoration: none !important
-        }
-        
-        .additional-checkout-button--apple-pay .additional-checkout-button__logo {
-            background: -webkit-named-image(apple-pay-logo-white) center center no-repeat !important;
-            background-size: auto 100% !important;
-            display: inline-block !important;
-            vertical-align: middle !important;
-            width: 3em !important;
-            height: 1.3em !important
-        }
-        
-        @media (max-width: 500px) {
-            .additional-checkout-button--apple-pay {
-                display: none
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 1200px) {
+            .stepscolumn {
+                flex: 100%;
+                max-width: 100%;
             }
-        }
-        
-        .additional-checkout-button--google-pay {
-            line-height: 0 !important;
-            padding: 0 !important;
-            border-radius: unset !important;
-            width: 80px !important
-        }
-        
-        @media (max-width: 500px) {
-            .additional-checkout-button--google-pay {
-                width: 100% !important
+            .stepstextcolumn {
+                flex: 100%;
+                max-width: 100%;
             }
-        }
-        
-        .gpay-iframe {
-            height: 44px !important;
-            width: 100% !important;
-            cursor: pointer;
-            vertical-align: middle !important
-        }
-        
-        .additional-checkout-button--paypal-express {
-            background-color: #ffc439 !important
-        }
-        
-        .additional-checkout-button--paypal,
-        .additional-checkout-button--venmo {
-            vertical-align: top;
-            line-height: 0 !important;
-            padding: 0 !important
-        }
-        
-        .additional-checkout-button--amazon {
-            background-color: #fad676 !important;
-            position: relative !important
-        }
-        
-        .additional-checkout-button--amazon .additional-checkout-button__logo {
-            -webkit-transform: translateY(4px) !important;
-            transform: translateY(4px) !important
-        }
-        
-        .additional-checkout-button--amazon .alt-payment-list-amazon-button-image {
-            max-height: none !important;
-            opacity: 0 !important;
-            position: absolute !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 100% !important
-        }
-        
-        .additional-checkout-button-visually-hidden {
-            border: 0 !important;
-            clip: rect(0, 0, 0, 0) !important;
-            clip: rect(0 0 0 0) !important;
-            width: 1px !important;
-            height: 1px !important;
-            margin: -2px !important;
-            overflow: hidden !important;
-            padding: 0 !important;
-            position: absolute !important
         }
     </style>
-    <script id="apple-pay-shop-capabilities" type="application/json">{"shopId":10087192,"countryCode":"CA","currencyCode":"USD","merchantCapabilities":["supports3DS"],"merchantId":"gid:\/\/shopify\/Shop\/10087192","merchantName":"With Love Darling","requiredBillingContactFields":["postalAddress","email"],"requiredShippingContactFields":["postalAddress","email"],"shippingType":"shipping","supportedNetworks":["visa","masterCard","amex"],"total":{"type":"pending","label":"With Love Darling","amount":"1.00"}}</script>
     <script id="shopify-features" type="application/json">{"accessToken":"431f23d8d24b3ec43d96311a981de6eb","betas":[],"domain":"withlovedarling.com","predictiveSearch":true,"shopId":10087192,"smart_payment_buttons_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/spb.en.js","dynamic_checkout_cart_url":"https:\/\/cdn.shopify.com\/shopifycloud\/payment-sheet\/assets\/latest\/dynamic-checkout-cart.en.js"}</script>
     <script>
         var Shopify = Shopify || {};
@@ -241,13 +155,9 @@
         }(window);
     </script>
     <script>
-        window.ShopifyPay = window.ShopifyPay || {};
-        window.ShopifyPay.apiHost = "pay.shopify.com";
-    </script>
-    <script>
         (function() {
             function asyncLoad() {
-                var urls = ["\/\/d1liekpayvooaz.cloudfront.net\/apps\/customizery\/customizery.js?shop=with-love-darling.myshopify.com", "\/\/www.mlveda.com\/MultiCurrency\/js\/jquery.currencies.min.js?shop=with-love-darling.myshopify.com", "\/\/www.mlveda.com\/MultiCurrency\/js\/jquery.currencies.min.js?shop=with-love-darling.myshopify.com", "https:\/\/www.mlveda.com\/MultiCurrency\/New\/js\/jquery.currencies.min.js?shop=with-love-darling.myshopify.com", "https:\/\/www.mlveda.com\/MultiCurrency\/New\/js\/jquery.currencies.min.js?shop=with-love-darling.myshopify.com", "https:\/\/www.mlveda.com\/MultiCurrency\/New\/js\/jquery.currencies.min.js?shop=with-love-darling.myshopify.com", "https:\/\/gatsby.tech\/script\/withlovedarling?shop=with-love-darling.myshopify.com", "https:\/\/assets.dailykarma.io\/prod\/init.js?shop=with-love-darling.myshopify.com", "\/\/productreviews.shopifycdn.com\/assets\/v4\/spr.js?shop=with-love-darling.myshopify.com"];
+                var urls = ["\/\/d1liekpayvooaz.cloudfront.net\/apps\/customizery\/customizery.js?shop=with-love-darling.myshopify.com"];
                 for (var i = 0; i < urls.length; i++) {
                     var s = document.createElement('script');
                     s.type = 'text/javascript';
@@ -274,27 +184,6 @@
             "p": "home"
         };
     </script>
-    <script>
-        window.ShopifyPaypalV4VisibilityTracking = true;
-    </script>
-    <script>
-        window.ShopifyAnalytics = window.ShopifyAnalytics || {};
-        window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
-        window.ShopifyAnalytics.meta.currency = 'USD';
-        var meta = {
-            "page": {
-                "pageType": "home"
-            }
-        };
-        for (var attr in meta) {
-            window.ShopifyAnalytics.meta[attr] = meta[attr];
-        }
-    </script>
-    <script>
-        window.ShopifyAnalytics.merchantGoogleAnalytics = function() {
-
-        };
-    </script>
     <script class="analytics">
         (function() {
             var customDocumentWrite = function(content) {
@@ -310,353 +199,7 @@
                     jquery('body').append(content);
                 }
             };
-
-            var isDuplicatedThankYouPageView = function() {
-                return document.cookie.indexOf('loggedConversion=' + window.location.pathname) !== -1;
-            }
-
-            var setCookieIfThankYouPage = function() {
-                if (window.location.pathname.indexOf('/checkouts') !== -1 &&
-                    window.location.pathname.indexOf('/thank_you') !== -1) {
-
-                    var twoMonthsFromNow = new Date(Date.now());
-                    twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
-
-                    document.cookie = 'loggedConversion=' + window.location.pathname + '; expires=' + twoMonthsFromNow;
-                }
-            }
-
-            var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
-            if (trekkie.integrations) {
-                return;
-            }
-            trekkie.methods = [
-                'identify',
-                'page',
-                'ready',
-                'track',
-                'trackForm',
-                'trackLink'
-            ];
-            trekkie.factory = function(method) {
-                return function() {
-                    var args = Array.prototype.slice.call(arguments);
-                    args.unshift(method);
-                    trekkie.push(args);
-                    return trekkie;
-                };
-            };
-            for (var i = 0; i < trekkie.methods.length; i++) {
-                var key = trekkie.methods[i];
-                trekkie[key] = trekkie.factory(key);
-            }
-            var lpath = '';
-            @if($local)
-                lpath = '/local/js/trekkie.storefront.min.js';'
-            @else
-                lpath = 'https://cdn.shopify.com/s/javascripts/tricorder/trekkie.storefront.min.js?v=2019.11.04.1';
-            @endif
-            trekkie.load = function(config) {
-                trekkie.config = config;
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.onerror = function(e) {
-                    (new Image()).src = '//v.shopify.com/internal_errors/track?error=trekkie_load';
-                };
-                script.async = true;
-                
-                script.src = lpath;
-                var first = document.getElementsByTagName('script')[0];
-                first.parentNode.insertBefore(script, first);
-            };
-            trekkie.load({
-                "Trekkie": {
-                    "appName": "storefront",
-                    "development": false,
-                    "defaultAttributes": {
-                        "shopId": 10087192,
-                        "isMerchantRequest": null,
-                        "themeId": 79055388771,
-                        "themeCityHash": "18257409911703149683",
-                        "contentLanguage": "en",
-                        "currency": "USD"
-                    }
-                },
-                "Performance": {
-                    "navigationTimingApiMeasurementsEnabled": true,
-                    "navigationTimingApiMeasurementsSampleRate": 1
-                },
-                "Facebook Pixel": {
-                    "pixelIds": ["320553835231991"],
-                    "agent": "plshopify1.2"
-                },
-                "Session Attribution": {}
-            });
-
-            var loaded = false;
-            var lpath2 = 'https://cdn.shopify.com/shopifycloud/boomerang/boomerang-latest.min.js';
-            @if($local)
-                lpath2 = '/local/js/boomerang-latest.min.js';
-            @endif
-            trekkie.ready(function() {
-                if (loaded) return;
-                loaded = true;
-
-                window.ShopifyAnalytics.lib = window.trekkie;
-
-                var originalDocumentWrite = document.write;
-                document.write = customDocumentWrite;
-                try {
-                    window.ShopifyAnalytics.merchantGoogleAnalytics.call(this);
-                } catch (error) {};
-                document.write = originalDocumentWrite;
-                (function() {
-                    if (window.BOOMR && (window.BOOMR.version || window.BOOMR.snippetExecuted)) {
-                        return;
-                    }
-                    window.BOOMR = window.BOOMR || {};
-                    window.BOOMR.snippetStart = new Date().getTime();
-                    window.BOOMR.snippetExecuted = true;
-                    window.BOOMR.snippetVersion = 12;
-                    window.BOOMR.shopId = 10087192;
-                    window.BOOMR.themeId = 79055388771;
-                    window.BOOMR.url = lpath2;
-                    var where = document.currentScript || document.getElementsByTagName("script")[0];
-                    if (!where || !where.parentNode) {
-                        return;
-                    }
-                    var promoted = false;
-                    var LOADER_TIMEOUT = 3000;
-
-                    function promote() {
-                        if (promoted) {
-                            return;
-                        }
-                        var script = document.createElement("script");
-                        script.id = "boomr-scr-as";
-                        script.src = window.BOOMR.url;
-                        script.async = true;
-                        where.parentNode.appendChild(script);
-                        promoted = true;
-                    }
-
-                    function iframeLoader(wasFallback) {
-                        promoted = true;
-                        var dom, bootstrap, iframe, iframeStyle;
-                        var doc = document;
-                        var win = window;
-                        window.BOOMR.snippetMethod = wasFallback ? "if" : "i";
-                        bootstrap = function(parent, scriptId) {
-                            var script = doc.createElement("script");
-                            script.id = scriptId || "boomr-if-as";
-                            script.src = window.BOOMR.url;
-                            BOOMR_lstart = new Date().getTime();
-                            parent = parent || doc.body;
-                            parent.appendChild(script);
-                        };
-                        if (!window.addEventListener && window.attachEvent && navigator.userAgent.match(/MSIE [67]./)) {
-                            window.BOOMR.snippetMethod = "s";
-                            bootstrap(where.parentNode, "boomr-async");
-                            return;
-                        }
-                        iframe = document.createElement("IFRAME");
-                        iframe.src = "about:blank";
-                        iframe.title = "";
-                        iframe.role = "presentation";
-                        iframe.loading = "eager";
-                        iframeStyle = (iframe.frameElement || iframe).style;
-                        iframeStyle.width = 0;
-                        iframeStyle.height = 0;
-                        iframeStyle.border = 0;
-                        iframeStyle.display = "none";
-                        where.parentNode.appendChild(iframe);
-                        try {
-                            win = iframe.contentWindow;
-                            doc = win.document.open();
-                        } catch (e) {
-                            dom = document.domain;
-                            iframe.src = "javascript:var d=document.open();d.domain='" + dom + "';void(0);";
-                            win = iframe.contentWindow;
-                            doc = win.document.open();
-                        }
-                        if (dom) {
-                            doc._boomrl = function() {
-                                this.domain = dom;
-                                bootstrap();
-                            };
-                            doc.write("<body onload='document._boomrl();'>");
-                        } else {
-                            win._boomrl = function() {
-                                bootstrap();
-                            };
-                            if (win.addEventListener) {
-                                win.addEventListener("load", win._boomrl, false);
-                            } else if (win.attachEvent) {
-                                win.attachEvent("onload", win._boomrl);
-                            }
-                        }
-                        doc.close();
-                    }
-                    var link = document.createElement("link");
-                    if (link.relList &&
-                        typeof link.relList.supports === "function" &&
-                        link.relList.supports("preload") &&
-                        ("as" in link)) {
-                        window.BOOMR.snippetMethod = "p";
-                        link.href = window.BOOMR.url;
-                        link.rel = "preload";
-                        link.as = "script";
-                        link.addEventListener("load", promote);
-                        link.addEventListener("error", function() {
-                            iframeLoader(true);
-                        });
-                        setTimeout(function() {
-                            if (!promoted) {
-                                iframeLoader(true);
-                            }
-                        }, LOADER_TIMEOUT);
-                        BOOMR_lstart = new Date().getTime();
-                        where.parentNode.appendChild(link);
-                    } else {
-                        iframeLoader(false);
-                    }
-
-                    function boomerangSaveLoadTime(e) {
-                        window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
-                    }
-                    if (window.addEventListener) {
-                        window.addEventListener("load", boomerangSaveLoadTime, false);
-                    } else if (window.attachEvent) {
-                        window.attachEvent("onload", boomerangSaveLoadTime);
-                    }
-                    if (document.addEventListener) {
-                        document.addEventListener("onBoomerangLoaded", function(e) {
-                            e.detail.BOOMR.init({});
-                            e.detail.BOOMR.t_end = new Date().getTime();
-                        });
-                    } else if (document.attachEvent) {
-                        document.attachEvent("onpropertychange", function(e) {
-                            if (!e) e = event;
-                            if (e.propertyName === "onBoomerangLoaded") {
-                                e.detail.BOOMR.init({});
-                                e.detail.BOOMR.t_end = new Date().getTime();
-                            }
-                        });
-                    }
-                })();
-
-                if (!isDuplicatedThankYouPageView()) {
-                    setCookieIfThankYouPage();
-
-                    window.ShopifyAnalytics.lib.page(
-                        null, {
-                            "pageType": "home"
-                        }
-                    );
-                }
-            });
-
-            var lpath3 = "//cdn.shopify.com/s/assets/shop_events_listener-17b815ecd2d75d5d3ec1b7a2a59daadee017bd9097e9b4629937b0a78cf0ecaa.js";
-            @if($local)
-                lpath3 = "/local/js/shop_events_listener-17b815ecd2d75d5d3ec1b7a2a59daadee017bd9097e9b4629937b0a78cf0ecaa.js";
-            @endif
-            var eventsListenerScript = document.createElement('script');
-            eventsListenerScript.async = true;
-            eventsListenerScript.src = lpath3;
-            document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
         })();
-    </script>
-    @if($local)
-    <script integrity="sha256-/LWbHGRT9fhJCeTFZxJJr7GGGJRbAOrw4xIjESlEc8I=" crossorigin="anonymous" data-source-attribution="shopify.loadjs" defer="defer" src="/local/js/load_js-fcb59b1c6453f5f84909e4c5671249afb18618945b00eaf0e3122311294473c2.js"></script>
-    <script crossorigin="anonymous" defer="defer" src="/local/js/storefront-f95c62afca18778ed8677facd32818c864b5e4938cba1769e8d8ba0b541d41dc.js"></script>
-    <script integrity="sha256-2P0MRbAT3p4Oh8olbuAvRl44EikliFx94nnWg4+R+mo=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="/local/js/features-d8fd0c45b013de9e0e87ca256ee02f465e38122925885c7de279d6838f91fa6a.js" crossorigin="anonymous"></script>
-    @else
-        <script integrity="sha256-/LWbHGRT9fhJCeTFZxJJr7GGGJRbAOrw4xIjESlEc8I=" crossorigin="anonymous" data-source-attribution="shopify.loadjs" defer="defer" src="//cdn.shopify.com/s/assets/storefront/load_js-fcb59b1c6453f5f84909e4c5671249afb18618945b00eaf0e3122311294473c2.js"></script>
-    <script crossorigin="anonymous" defer="defer" src="//cdn.shopify.com/s/assets/shopify_pay/storefront-f95c62afca18778ed8677facd32818c864b5e4938cba1769e8d8ba0b541d41dc.js?v=20190107"></script>
-    <script integrity="sha256-2P0MRbAT3p4Oh8olbuAvRl44EikliFx94nnWg4+R+mo=" data-source-attribution="shopify.dynamic-checkout" defer="defer" src="//cdn.shopify.com/s/assets/storefront/features-d8fd0c45b013de9e0e87ca256ee02f465e38122925885c7de279d6838f91fa6a.js" crossorigin="anonymous"></script>
-    @endif
-    <style id="shopify-dynamic-checkout">
-        .shopify-payment-button__button--hidden {
-            visibility: hidden;
-        }        
-        .shopify-payment-button__button {
-            border-radius: 4px;
-            border: none;
-            box-shadow: 0 0 0 0 transparent;
-            color: white;
-            cursor: pointer;
-            display: block;
-            font-size: 1em;
-            font-weight: 500;
-            line-height: 1;
-            text-align: center;
-            width: 100%;
-            transition: background 0.2s ease-in-out;
-        }
-        
-        .shopify-payment-button__button[disabled] {
-            opacity: 0.6;
-            cursor: default;
-        }
-        
-        .shopify-payment-button__button--unbranded {
-            background-color: #1990c6;
-            padding: 1em 2em;
-        }
-        
-        .shopify-payment-button__button--unbranded:hover:not([disabled]) {
-            background-color: #136f99;
-        }
-        
-        .shopify-payment-button__more-options {
-            background: transparent;
-            border: 0 none;
-            cursor: pointer;
-            display: block;
-            font-size: 1em;
-            margin-top: 1em;
-            text-align: center;
-            width: 100%;
-        }
-        
-        .shopify-payment-button__more-options:hover:not([disabled]) {
-            text-decoration: underline;
-        }
-        
-        .shopify-payment-button__more-options[disabled] {
-            opacity: 0.6;
-            cursor: default;
-        }
-        
-        .shopify-payment-button__button--branded {
-            display: flex;
-            flex-direction: column;
-            min-height: 44px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .shopify-payment-button__button--branded .shopify-cleanslate {
-            flex: 1 !important;
-            display: flex !important;
-            flex-direction: column !important;
-        }
-    </style>
-    <style id="shopify-dynamic-checkout-cart">
-        @media screen and (min-width: 750px) {
-            #dynamic-checkout-cart {
-                min-height: 50px;
-            }
-        }
-        
-        @media screen and (max-width: 750px) {
-            #dynamic-checkout-cart {
-                min-height: 180px;
-            }
-        }
-    </style>
-    <script>
-        window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');
     </script>
 </head>
 
@@ -794,7 +337,6 @@
                             { "@context": "http://schema.org", "@type": "WebSite", "name": "With Love Darling", "potentialAction": { "@type": "SearchAction", "target": "https:\/\/withlovedarling.com\/search?q={search_term_string}", "query-input": "required name=search_term_string" }, "url": "https:\/\/withlovedarling.com" }
                         </script>
                     </div>
-
         <!-- CONTENT -->
         <main role="main" id="MainContent" class="main-content">
             <div class="index-sections">
@@ -803,7 +345,6 @@
             </div>
         </main>
     </div>
-
     <div id="shopify-section-footer" class="shopify-section">
         <!-- /sections/footer.liquid -->
         <footer class="site-footer-wrapper wide-image" role="contentinfo" data-section-id="footer" data-section-type="footer">
@@ -917,57 +458,5 @@
     <script src="//cdn.shopify.com/s/javascripts/currencies.js" type="text/javascript"></script>
     <script src="//cdn.shopify.com/s/files/1/1008/7192/t/15/assets/jquery.currencies.min.js?481" type="text/javascript"></script>
     @endif
-    <script>
-        Currency.format = 'money_with_currency_format';
-        var shopCurrency = 'USD';
-        /* Sometimes merchants change their shop currency, let's tell our JavaScript file */
-        Currency.moneyFormats[shopCurrency].money_with_currency_format = "$1.00 USD";
-        Currency.moneyFormats[shopCurrency].money_format = "$1.00";
-        /* Default currency */
-        var defaultCurrency = 'USD';
-        /* Cookie currency */
-        var cookieCurrency = Currency.cookie.read();
-        /* Fix for customer account pages */
-        jQuery('span.money span.money').each(function() {
-            jQuery(this).parents('span.money').removeClass('money');
-        });
-        /* Saving the current price */
-        jQuery('span.money').each(function() {
-            jQuery(this).attr('data-currency-USD', jQuery(this).html());
-        });
-        // If there's no cookie.
-        if (cookieCurrency == null) {
-            if (shopCurrency !== defaultCurrency) {
-                Currency.convertAll(shopCurrency, defaultCurrency);
-            } else {
-                Currency.currentCurrency = defaultCurrency;
-            }
-        }
-        // If the cookie value does not correspond to any value in the currency dropdown.
-        else if (jQuery('[name=currencies]').size() && jQuery('[name=currencies] option[value=' + cookieCurrency + ']').size() === 0) {
-            Currency.currentCurrency = shopCurrency;
-            Currency.cookie.write(shopCurrency);
-        } else if (cookieCurrency === shopCurrency) {
-            Currency.currentCurrency = shopCurrency;
-        } else {
-            Currency.convertAll(shopCurrency, cookieCurrency);
-        }
-        jQuery('[name=currencies]').val(Currency.currentCurrency).change(function() {
-            var newCurrency = jQuery(this).val();
-            Currency.convertAll(Currency.currentCurrency, newCurrency);
-            jQuery('.selected-currency').text(Currency.currentCurrency);
-        });
-        var original_selectCallback = window.selectCallback;
-        var selectCallback = function(variant, selector) {
-            original_selectCallback(variant, selector);
-            Currency.convertAll(shopCurrency, jQuery('[name=currencies]').val());
-            jQuery('.selected-currency').text(Currency.currentCurrency);
-        };
-        $('body').on('ajaxCart.afterCartLoad', function(cart) {
-            Currency.convertAll(shopCurrency, jQuery('[name=currencies]').val());
-            jQuery('.selected-currency').text(Currency.currentCurrency);
-        });
-        jQuery('.selected-currency').text(Currency.currentCurrency);
-    </script>
 </body>
 </html>

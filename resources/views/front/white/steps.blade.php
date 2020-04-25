@@ -58,35 +58,17 @@
     <section class="index-double js-overflow-container image-with-text-section colors-index-image-with-text screen-height-one-half " data-section-id="index-image-with-text" data-section-type="image-with-text" id="FeaturedImage-index-image-with-text" style="min-height: 331px;">
         <div class="image-with-text-wrapper js-overflow-container  image-with-text-wrapper--natural" style="min-height: 332px;">
         <div class="image-with-text__image">
-                <div class="image-with-text__image-img lazyloaded" data-bgset="/images/design_contest_{width}.jpg" data-widths="[180, 360, 540, 720, 800, 900, 1080, 1296, 1512, 1728, 1950,]" data-aspectratio="0.75" style="background-image: url(&quot;/images/design_contest_900.jpg&quot;);">
+                <div class="image-with-text__image-img lazyloaded" data-bgset="/images/design_contest_{width}.jpg" data-widths="[180, 360, 540, 720, 800, 900, 1080, 1296, 1512, 1728, 1950,]" data-aspectratio="0.75" style="background-image: url('{{ $contest->stepsMedia->getUrl('_900') }}');">
                     <picture style="display: none;">
-                        <source data-srcset="/images/design_contest_180.jpg 180w,
-                        /images/design_contest_360.jpg 360w,
-                        /images/design_contest_540.jpg 540w,
-                        /images/design_contest_720.jpg 720w,
-                        /images/design_contest_900.jpg 900w,
-                        /images/design_contest_1080.jpg 1080w,
-                        /images/design_contest_1296.jpg 1296w,
-                        /images/design_contest_1512.jpg 1512w,
-                        /images/design_contest_1728.jpg 1728w,
-                        /images/design_contest_1950.jpg 1950w," 
-                            srcset="/images/design_contest_180.jpg 180w,
-                        /images/design_contest_360.jpg 360w,
-                        /images/design_contest_540.jpg 540w,
-                        /images/design_contest_720.jpg 720w,
-                        /images/design_contest_900.jpg 900w,
-                        /images/design_contest_1080.jpg 1080w,
-                        /images/design_contest_1296.jpg 1296w,
-                        /images/design_contest_1512.jpg 1512w,
-                        /images/design_contest_1728.jpg 1728w,
-                        /images/design_contest_1950.jpg 1950w,"
+                        <source data-srcset="{{ $contest->stepsMedia->getSrcset('responsive') }}" 
+                            srcset="{{ $contest->stepsMedia->getSrcset('responsive') }}"
                         sizes="(max-width: 180px) 140px,
                         (max-width: 360px) 320px,
                         (max-width: 540px) 500px,
                         (max-width: 720px) 680px,
                         (max-width: 900px) 860px,
                         (max-width: 1080px) 1040px,
-                        (max-width: 1296px) 256px,
+                        (max-width: 1296px) 1256px,
                         (max-width: 1512px) 1472px,
                         (max-width: 1728px) 1688px,
                         1910px">
@@ -125,7 +107,7 @@
                         1910px">-->
                 </div>
                 <noscript>
-                    <div class="image-with-text__image-img no-js-image" style="background-image:url('/images/design_contest_540.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                    <div class="image-with-text__image-img no-js-image" style="background-image:url('{{ $contest->stepsMedia->getUrl('_900') }}'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
                     </div>
                 </noscript>
             </div>

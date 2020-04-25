@@ -21,6 +21,7 @@ Route::get('/preview/{id}', 'ContestsController@preview');
 Route::get('/enter-contest', 'ContestsController@enterContest')->name('home');
 Route::get('/contest/add-entry', 'ContestsController@addEntry');
 Route::get('/contest/entry/{id}', 'ContestsController@showEntry');
+Route::get('/test', 'ContestsController@test');
 
 
 Route::get('/account', function() {

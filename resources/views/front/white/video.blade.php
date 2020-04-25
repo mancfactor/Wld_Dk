@@ -19,8 +19,8 @@
     <div class="iframe-container" id="youtube-index-container">
         <iframe src="https://www.youtube-nocookie.com/embed/{{ $contest->video_link}}?autoplay=1&showinfo=0&rel=0&color=white"  frameborder="0"></iframe>
     </div>    
-    <div id="button-row">
-        <p style="text-align:center; padding: 20px;">
+    <div id="stepsrow">
+        <p class="t-text-center t-p-4 sm:t-p-10 t-text-base sm:t-text-lg" >
             @if(!empty($contest->button1_text))
                 <a href="{{$contest->button1_link}}" class="btn btn--large btn--secondary btn--neutral caps">{{$contest->button1_text}}</a>
             @endif

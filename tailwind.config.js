@@ -1,5 +1,5 @@
 module.exports = {
-  prefix: '',
+  prefix: 't-',
   important: false,
   separator: ':',
   theme: {
@@ -147,6 +147,7 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
