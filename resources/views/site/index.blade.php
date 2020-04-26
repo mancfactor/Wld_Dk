@@ -14,14 +14,16 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($site->getMedia('site') as $media)
-        <tr>
-            <td  class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">{{$media->id}}</td>
-            <td class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col"><a target="_BLANK" href="{{ $media->getUrl('responsive') }}"><img class="t-h-64 t-object-center t-object-cover" src="{{ $media->getUrl('responsive') }}"></a></td>
-            <td class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">{{$media->name }}</td>
-            <td class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">{{$media->file_name }}</td>
-        </tr>
-        @endforeach
+        @if($site->media->count())
+            @foreach($site->getMedia('site') as $media)
+            <tr>
+                <td  class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">{{$media->id}}</td>
+                <td class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col"><a target="_BLANK" href="{{ $media->getUrl('responsive') }}"><img class="t-h-64 t-object-center t-object-cover" src="{{ $media->getUrl('responsive') }}"></a></td>
+                <td class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">{{$media->name }}</td>
+                <td class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">{{$media->file_name }}</td>
+            </tr>
+            @endforeach
+        @endif
     </tbody>
 </table>
 <br />
