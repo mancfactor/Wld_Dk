@@ -27,7 +27,7 @@
 				<div class="t-bg-white t-rounded-lg t-overflow-hidden t-text-center">
 					<a id="product-{{ $entry->id }}" class="product-link" href="/product/{{ $entry->id }}" aria-label="{{ $entry->name }}">
 						<div class="t-relative t-pb-2/3" >
-							<img class="t-top-0 t-h-full t-w-full t-object-cover t-object-center" src="{{$pic->getUrl('responsive')}}" srcset="{{$pic->getSrcSet('responsive')}}"  alt="{{$entry->name}}"  />	
+							<img class="t-top-0 t-h-full t-w-full t-object-cover t-object-center" src="{{$pic->getUrl('thumb')}}" srcset="{{$pic->getSrcSet('responsive')}}"  alt="{{$entry->name}}"  />	
 						</div>
 						<div class="t-p-4">
 							<div class="t-flex t-justify-between t-items-center ">

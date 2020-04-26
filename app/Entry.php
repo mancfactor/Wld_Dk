@@ -127,19 +127,7 @@ class Entry extends Model implements HasMedia
             ->width(300)
             ->height(300);
             
-        $this->addMediaConversion('_300')
-        ->width(300);
-        $this->addMediaConversion('_600')
-        ->width(600);
         $this->addMediaConversion('_900')
-        ->width(540);
-        $this->addMediaConversion('_1080')
-        ->width(1080);
-        $this->addMediaConversion('_1200')
-        ->width(1296);
-        $this->addMediaConversion('_1440')
-        ->width(1512);
-        $this->addMediaConversion('_2048')
-        ->width(2048);
+       ->width(900);
     }
 }

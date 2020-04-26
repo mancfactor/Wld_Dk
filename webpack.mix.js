@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -16,4 +17,6 @@ mix.js('resources/assets/js/app.js', 'public/js').sass('resources/assets/sass/ap
   .options({
     processCssUrls: false,
     postCss: [ tailwindcss('tailwind.config.js') ],
-  })
+  }).purgeCss({
+    enabled: true,
+  });

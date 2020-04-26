@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\DB;
 class ContestsController extends Controller
 {
     public function __construct() {
+        ini_set('upload_max_filesize', '100M');
         $this->middleware('auth')->only('enterContest');
     }
 
@@ -172,6 +173,7 @@ class ContestsController extends Controller
 
         if (isset($data['media'])) {
 	    	if($data['media']->getError() != 1) {    
+                ini_set('max_execution_time', 120);
 	            $entry->addMediaFromRequest('media')->toMediaCollection('entries');
 	        } else {
 	            flash()->error('Media not valid');
