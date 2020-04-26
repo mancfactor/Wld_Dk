@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Entry;
 use App\User;
 use Carbon\Carbon;
+use Exception;
 
 class VoteController extends Controller
 {
