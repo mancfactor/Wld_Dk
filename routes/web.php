@@ -21,6 +21,7 @@ Route::get('/preview/{id}', 'ContestsController@preview');
 Route::get('/enter-contest', 'ContestsController@enterContest')->name('home');
 Route::get('/contest/add-entry', 'ContestsController@addEntry');
 Route::get('/contest/entry/{id}', 'ContestsController@showEntry');
+Route::get('/test', 'ContestsController@test');
 
 
 Route::get('/account', function() {
@@ -47,62 +48,12 @@ Route::get('entries/{entry}/approve/{status}', 'EntryController@approve');
 Route::get('entries/media/{entry}', 'EntryController@addMedia');
 Route::patch('entries/update-media/{entry}', 'EntryController@updateMedia');
 
-Route::resource('contestants', 'ContestantsController');
+Route::get('contestants', 'ContestantsController@index');
 
 Route::get('tags/{tags}', 'TagController@show');
 
 Route::get('/logout', 'ContestsController@logout');
 
-/* Examples 
-
-// Old view
-Route::get('/old', function () {
-    return view('front.contest');
-});
-
-
-// old pages
-Route::get('/steps', 'ContestsController@steps');
-Route::get('/howtoenter', 'ContestsController@howtoenter');
-Route::get('/rules', 'ContestsController@rules');
-Route::get('/prizes', 'ContestsController@prizes');
-
-
-// laravel testing
-Route::get('/contest', function () {
-    return view('contest.index');
-});
-
-// Test Responsive Image
-Route::get('/resp', 'ContestsController@test');
-
-Route::get('/test-email', function() {
-    return new \App\Mail\Welcome;
-});
-
-
-Route::get('/resource-example', function() {
-
-    return new UserResource(\App\User::all()->first());
-});
-
-Route::get('/resource-col-example', function() {
-
-    $users = App\User::paginate(3);
-    return new UserCollectionResource($users);
-});
-
-
-Route::middleware('throttle:4:1')->get('/api', function (Request $request) {
-    return 'Hello there';
-    //return view('welcome');
-});
-
-// Logout all other sessions
-Route::get('/logoutOther',  function() {
-
-    auth()->logoutOtherDevices('WLDtest');
-    return redirect('/');
-});
-
-*/
+Route::get('admin/site-media/add', 'SiteController@addMedia');
+Route::patch('site/update-media/{site}', 'SiteController@updateMedia');
+Route::get('/admin/site-media','SiteController@siteMedia');

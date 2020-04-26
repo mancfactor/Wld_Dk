@@ -16,19 +16,8 @@ class ContestantsController extends Controller
     }
     
     public function index() {
-        $contestants = User::Contestants()->get();
+        $contestants = User::Contestants()->paginate(10);
 
         return view('contestants.index')->with('contestants',$contestants);
     }
-
-    public function show($id) {
-        try{
-            $contestant = User::findOrFail($id);
-        } catch (Exception $e) {
-            abort(404);
-        }        
-        
-        return view('contestants.show')->with('contestant',$contestant);
-    }
-    
 }

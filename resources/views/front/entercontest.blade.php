@@ -17,66 +17,60 @@
                 </svg>
             </span>
             <a href="/enter-contest" title="Enter Contest">CONTEST ENTRIES</a>
-            
         </small>
     </nav>
 </div>
-<div id="shopify-section-index-image-with-text" class="shopify-section"> 
-        <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
-        <p style="text-align:center;font-weight:bold;margin-top:20px;margin-bottom:20px;font-size:36px;">Submit your design,<br />and tell us it's story.</p>
-        <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
-        <p><br /></p>
-        <p></p>
-        <p style="text-align: center;">
-            <a class="btn btn--large btn--secondary btn--neutral caps" href="/contest/add-entry">
-                <span class="tiny">UPLOAD YOUR DESIGN</span>
-            </a>
-        </p>
-        <h2 class="theme coll-heading">CONTEST ENTRIES</h2>
-         <div class="opposing-items">
-            @if(count($entries))
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col" style="width:200px;text-align:left;">Image</th>
-                        <th scope="col" style="width:80px;text-align:left;">Name</th>
-                        <th scope="col" style="width:80px;text-align:left;">Designer</th>
-                        <th scope="col" style="width:60px;text-align:left;">Status</th>
-                        <th scope="col" style="width:60px;text-align:left;">Votes</th>
-                        <th scope="col" style="width:60px;text-align:left;">Comments</th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach ($entries as $e)
-                    <tr>
-                        
-                        <td>@unless ($e->getMedia('entries')->isEmpty())
-                            <a href="{{ url('/preview', $e->id) }}">
-                            <img src="{{ $e->getMedia('entries')[0]->getUrl('thumb') }}">    
-                            </a>
-                            @endunless
-                        </td>
-                        <td scope="row"><a href="{{ url('/preview',$e->id) }}">{{ $e->name}}</a></td>
-                        <td>{{$e->designer}}</td>
-                        <td>
-                        @if ($e->approved == 2)
-                            Rejected
-                        @elseif ($e->approved == 1)
-                            Approved
-                        @else
-                            Pending
-                        @endif
-                        </td>
-                        <td>{{count($e->voters()->get())}}</td>
-                        <td>{{$e->comments()->count()}}</td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-            @else
-            <p>No entires yet</p>
-            @endif
-        </div>
+<div class="t-m-0 t-justify-center t-align-center t-text-center"> 
+    <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
+    <p class="t-text-center t-font-bold t-mt-4 t-mb-4 t-text-lg sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">Submit your design,<br />and tell us it's story.</p>
+    <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
+    <p><br /></p>
+    <p></p>
+    <p style="text-align: center;">
+        <a class="btn btn--large btn--secondary btn--neutral caps" href="/contest/add-entry">
+            <span class="tiny">UPLOAD YOUR DESIGN</span>
+        </a>
+    </p>
+
+    <h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">CONTEST ENTRIES ({{$entries->total()}})</h2>
+    <div class="t-flex t-content-center t-px-10 t-text-xs sm:t-text-sm wldpink">
+        @if(count($entries))
+        <table class="t-table-auto t-m-4 t-w-full t-border-gray-500">
+            <thead>
+                <tr>
+                    <th class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">Image</th>
+                    <th class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">Name</th>
+                    <th class="t-border t-border-gray-500 t-px-1 t-py-1" scope="col">Status</th>
+                    <th class="t-border t-border-gray-500 t-px-1 t-py-1 t-hidden sm:t-table-cell" scope="col">Designer</th>
+                    <th class="t-border t-border-gray-500 t-px-1 t-py-1 t-hidden sm:t-table-cell" scope="col">Votes</th>
+                    <th class="t-border t-border-gray-500 t-px-1 t-py-1 t-hidden sm:t-table-cell" scope="col">Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            @foreach ($entries as $e)
+                <tr class="items-center">
+                    <td class="t-border t-border-gray-400 t-px-1 t-py-1">@unless ($e->getMedia('entries')->isEmpty())
+                        <a href="{{ url('/preview', $e->id) }}">
+                            <img class="t-h-16 sm:t-h-32 t-object-cover t-object-fit" src="{{ $e->getMedia('entries')[0]->getUrl('responsive') }}">    
+                        </a>
+                        @endunless
+                    </td>
+                    <td class="t-border t-border-gray-500 t-px-1 t-py-1" scope="row"><a href="{{ url('/preview',$e->id) }}">{{ $e->name}}</a></td>
+                    <td class="t-border t-border-gray-500 t-px-1 t-py-1">{{$e->getApprovedText()}}</td>
+                    <td class="t-border t-border-gray-500 t-px-1 t-py-1 t-hidden sm:t-table-cell">{{ $e->designer}}</td>
+                    <td class="t-border t-border-gray-500 t-px-1 t-py-1 t-hidden sm:t-table-cell">{{count($e->voters()->get())}}</td>
+                    <td class="t-border t-border-gray-500 t-px-1 t-py-1 t-hidden sm:t-table-cell">{{$e->comments()->count()}}</td>
+                </tr>
+            @endforeach
+            
+            </tbody>
+        </table>
+        @else
+        <p>No entires yet</p>
+        @endif   
     </div>
+</div>
+<div class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl t-text-gray-800 t-font-bold">{{ $entries->onEachSide(2)->links('vendor.pagination.default')}}</div>
    
 @endsection

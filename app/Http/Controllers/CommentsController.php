@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Laravelista\Comments\Comment;
+use Exception;
 
 class CommentsController extends Controller
 {
@@ -25,7 +26,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        $comments = Comment::all();
+        $comments = Comment::paginate(10);
 
         return view('comments.index')->with('comments',$comments);
     }

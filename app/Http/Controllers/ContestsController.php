@@ -10,6 +10,7 @@ use Jorenvh\Share\Share;
 use Illuminate\Http\Request;
 use App\Http\Requests\EntryRequest;
 use Illuminate\Support\Facades\Auth;
+use Spatie\MediaLibrary\Models\Media;
 
 class ContestsController extends Controller
 {
@@ -29,6 +30,7 @@ class ContestsController extends Controller
 
             $contest = Contest::active()->findOrFail($contestId);
 
+
         } catch (Exception $e) {
             abort(500);
         } 
@@ -43,11 +45,7 @@ class ContestsController extends Controller
      */
     public function featured()
     {
-        try{
-            $entries = Entry::approved()->get();
-        } catch (Exception $e) {
-            abort(404);
-        }    
+        $entries = Entry::approved()->orderBy('created_at', 'desc')->paginate(9);
         
         return view('front.white.featured')->with('entries',$entries);
     }
@@ -88,14 +86,13 @@ class ContestsController extends Controller
     public function test()
     {
         try{
-            $entry = Entry::findOrFail(1);
+            $contest = Contest::findOrFail(1);
+            $entries = Entry::approved()->orderBy('created_at', 'desc')->paginate(9);
         } catch (Exception $e) {
             abort(404);
         }    
         
-        $media = $entry->getMedia('entries')[0];
-        
-        return view('front.white.resp')->with('media',$media);
+        return view('front.test')->with('contest',$contest)->with('entries', $entries);
     }
 
     public function steps()
@@ -117,13 +114,6 @@ class ContestsController extends Controller
     {
         $user = auth()->user();
 
-        print_r($user);
-
-        if(is_object($user)) {
-            print_r($user->id);
-        } else {
-            print_r('userNotFound');
-        }
         return view('front.rules');
     }
 
@@ -131,7 +121,7 @@ class ContestsController extends Controller
     {
         $userId = auth()->user()->id;
 
-        $entries = Entry::all()->where('user_id',$userId);
+        $entries = Entry::where('user_id',$userId)->paginate(9);
         return view('front.entercontest')->with('entries',$entries);
     }
 
@@ -234,73 +224,6 @@ class ContestsController extends Controller
         
         return view('front.entries.show')->with('entry',$entry);
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Contest  $contest
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Contest $contest)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Contest  $contest
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Contest $contest)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Contest  $contest
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Contest $contest)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Contest  $contest
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Contest $contest)
-    {
-        //
-    }
-
 
     public function logout()
     {

@@ -1,0 +1,64 @@
+@tailwind base;
+
+@tailwind components;
+        
+.wldpink {
+    background-color: #ffe6e3; 
+}
+
+.stepsrow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stepscolumn {
+    flex: 50%;
+    max-width: 50%;
+}
+
+.stepstextcolumn {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.stepscolumn img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.picpad {
+    padding-top: 30%;
+    padding-bottom: 30%;
+}
+
+@media screen and (max-width: 1280px) {
+    .stepscolumn {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .stepstextcolumn {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .picpad {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .stepscolumn {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .stepstextcolumn {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@tailwind utilities;

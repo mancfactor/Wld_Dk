@@ -9,6 +9,8 @@ use Carbon\Carbon;
 use App\Http\Requests\ContestRequest;
 use App\Tag;
 use Exception;
+use Spatie\MediaLibrary\Models\Media;
+use Illuminate\Support\Arr;
 
 class ContestController extends Controller
 {
@@ -18,7 +20,7 @@ class ContestController extends Controller
     }
     
     public function index() {
-        $contests = Contest::latest('start_date')->active()->started()->get();
+        $contests = Contest::latest('start_date')->active()->started()->paginate(10);
 
         return view('contests.index')->with('contests',$contests);
     }
@@ -47,13 +49,18 @@ class ContestController extends Controller
         ->pluck('name','id');
         $tagsDefault = $contest->getTagsListAttribute();
 
+        //$mediaOptions = Media::where([['model_type','=',\App\Site::class], ['model_id', '=', 1]])->orderBy('name','asc')->pluck('name','id')->toArray();
+        $mediaOptions = Media::where('model_type',\App\Site::class)->orderBy('name','asc')->pluck('name','id');
+        //$mediaOptions = Arr::prepend($mediaOptions,"No Image Selected",0);
+        
         return view('contests.edit')->with('contest',$contest)
                     ->with('startDateDefault',$contest->getStartDate())
                     ->with('endDateDefault',$contest->getEndDate())
                     ->with('submitDateDefault',$contest->getSubmitDate())
                     ->with('voteDateDefault',$contest->getVoteDate())
                     ->with('tagsOptions',$tagsOptions)
-                    ->with('tagsDefault',$tagsDefault);
+                    ->with('tagsDefault',$tagsDefault)
+                    ->with('mediaOptions',$mediaOptions);
     }
 
     public function create() {
@@ -62,9 +69,23 @@ class ContestController extends Controller
         ->orderBy('name', 'asc')
         ->pluck('name','id');
         $tagsDefault = array();
+
+        //$mediaOptions = Media::where([['model_type','=',\App\Site::class], ['model_id', '=', 1]])->orderBy('name','asc')->pluck('name','id')->toArray();
+        $mediaOptions = Media::where('model_type',\App\Site::class)->orderBy('name','asc')->pluck('name','id');
+        //$mediaOptions = Arr::prepend($mediaOptions,"No Image Selected",0);
+
                 
-        return view('contests.create')->with('startDateDefault',date('Y-m-d'))->with('endDateDefault',date('Y-m-d'))->with('submitDateDefault',date('Y-m-d'))->with('voteDateDefault',date('Y-m-d'))->with('tagsOptions',$tagsOptions)->with('tagsDefault',$tagsDefault);
+        return view('contests.create')
+            ->with('contest',new Contest())
+            ->with('startDateDefault',date('Y-m-d'))
+            ->with('endDateDefault',date('Y-m-d'))
+            ->with('submitDateDefault',date('Y-m-d'))
+            ->with('voteDateDefault',date('Y-m-d'))
+            ->with('tagsOptions',$tagsOptions)
+            ->with('tagsDefault',$tagsDefault)
+            ->with('mediaOptions',$mediaOptions);
     }
+    
 
     public function store(ContestRequest $request) {
 
@@ -88,10 +109,21 @@ class ContestController extends Controller
         } catch (Exception $e) {
             abort(404);
         }        
-        
-        $contest->update($request->all());
+
+        $data = $request->all();
+        if(is_null($data['steps_media_id']) || !($data['steps_media_id'])) {
+            $data['steps_media_id'] = null;
+        }
+        if(is_null($data['intro_media1_id']) || !($data['intro_media1_id'])) {
+            $data['intro_media1_id'] = null;
+        }
+        if(is_null($data['intro_media2_id']) || !($data['intro_media2_id'])) {
+            $data['intro_media2_id'] = null;
+        }
+        $contest->update($data);
         $contest->tags()->sync($request->input('tags'));
         
         return redirect('contests');
     }
+    
 }
