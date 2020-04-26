@@ -12,6 +12,7 @@ use App\Http\Requests\EntryRequest;
 use Illuminate\Support\Facades\Auth;
 use Overtrue\LaravelFollow\FollowRelation;
 use Spatie\MediaLibrary\Models\Media;
+use Illuminate\Support\Facades\DB;
 
 class ContestsController extends Controller
 {
@@ -47,8 +48,17 @@ class ContestsController extends Controller
     public function featured()
     {
         $entries = Entry::approved()->orderBy('created_at', 'desc')->paginate(9);
+        $entries_votes = DB::table('entries')
+        ->join('followables', function ($join){
+            $join->on('entries.id', '=', 'followables.followable_id')
+            ->where([['followables.followable_type','=',Entry::class],['entries.approved','=',1]]);
+        })
+        ->select('entries.id', DB::raw('count(*) as votes'))
+        ->groupBy('entries.id')
+        ->pluck('votes','id');;
         
-        return view('front.white.featured')->with('entries',$entries);
+        
+        return view('front.white.featured')->with('entries',$entries)->with('entries_votes',$entries_votes);
     }
 
 
@@ -72,8 +82,8 @@ class ContestsController extends Controller
      */
     public function preview($id)
     {
-            $entry = Entry::findOrFail($id);
-            $votes = FollowRelation::where([['followable_id','=',$id],['followable_type','=',Entry::class]])->get();
+        $entry = Entry::findOrFail($id);
+        $votes = FollowRelation::where([['followable_id','=',$id],['followable_type','=',Entry::class]])->get();
                 
         return view('front.white.entry')->with('entry',$entry)->with('votes',$votes);
     }
