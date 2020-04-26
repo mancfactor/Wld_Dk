@@ -10,6 +10,7 @@ use Jorenvh\Share\Share;
 use Illuminate\Http\Request;
 use App\Http\Requests\EntryRequest;
 use Illuminate\Support\Facades\Auth;
+use Overtrue\LaravelFollow\FollowRelation;
 use Spatie\MediaLibrary\Models\Media;
 
 class ContestsController extends Controller
@@ -58,13 +59,10 @@ class ContestsController extends Controller
      */
     public function product($id)
     {
-        try{
-            $entry = Entry::approved()->findOrFail($id);
-        } catch (Exception $e) {
-            abort(404);
-        }    
-                
-        return view('front.white.entry')->with('entry',$entry);
+        $entry = Entry::approved()->findOrFail($id);
+        $votes = FollowRelation::where([['followable_id','=',$id],['followable_type','=',Entry::class]])->get();
+
+        return view('front.white.entry')->with('entry',$entry)->with('votes',$votes);
     }
 
     /**
@@ -74,13 +72,10 @@ class ContestsController extends Controller
      */
     public function preview($id)
     {
-        try{
             $entry = Entry::findOrFail($id);
-        } catch (Exception $e) {
-            abort(404);
-        }    
+            $votes = FollowRelation::where([['followable_id','=',$id],['followable_type','=',Entry::class]])->get();
                 
-        return view('front.white.entry')->with('entry',$entry);
+        return view('front.white.entry')->with('entry',$entry)->with('votes',$votes);
     }
 
     public function test()

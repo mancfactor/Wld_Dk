@@ -7,19 +7,23 @@ use Illuminate\Http\Request;
 use App\Entry;
 use App\User;
 use Carbon\Carbon;
-use Exception;
+use Overtrue\LaravelFollow\FollowRelation;
 
 class VoteController extends Controller
 {
     public function vote($id) {
-        try{
-            
+            /*
             $entry = Entry::findOrFail($id);
             $user = User::Contestants()->inRandomOrder()->first();
             $user->upvote($entry);
-        } catch (Exception $e) {
-            abort(404);
-        }        
+            */
+            $f = new FollowRelation();
+            $f->user_id = Carbon::now()->getTimestamp();
+            $f->followable_id = $id;
+            $f->followable_type = 'App\\Entry';
+            $f->relation = 'upvote';
+            $f->save();
+
         
         return back();
     }

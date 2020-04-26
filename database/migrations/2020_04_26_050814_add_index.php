@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DropForKeyFollowable extends Migration
+class AddIndex extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,8 @@ class DropForKeyFollowable extends Migration
     public function up()
     {
         Schema::table('followables', function (Blueprint $table) {
-            $table->dropForeign('followables_user_id_foreign');
             $table->increments('id');
+            $table->index(['followable_id','followable_type'], 'follow_key');
         });
     }
 
@@ -27,12 +27,8 @@ class DropForKeyFollowable extends Migration
     public function down()
     {
         Schema::table('followables', function (Blueprint $table) {
-            $userForeignKey = config('follow.users_table_foreign_key', 'user_id');
-            $table->foreign($userForeignKey)
-            ->references(config('follow.users_table_primary_key', 'id'))
-            ->on(config('follow.users_table_name', 'users'))
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+            $table->dropIndex('follow_key');
+            $table->drop('id');
         });
     }
 }

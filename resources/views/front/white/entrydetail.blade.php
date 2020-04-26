@@ -75,7 +75,7 @@
                                     </div>
                                     <div id="votes" class="product__submit product__submit--spb" data-product-id="3928106565731">
                                         <div class="product__submit__buttons">
-                                            <button type="button"  class="btn vote-button product__submit__add"><a href="/vote/{{$entry->id}}">Vote ({{ count($entry->voters()->get())}})</a></button>
+                                            <button type="button"  class="btn vote-button product__submit__add"><a href="/vote/{{$entry->id}}">Vote ({{ count($votes)}})</a></button>
                                         </div>
                                     </div>
                                 </div>
