@@ -7,12 +7,12 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~4.0",
+        "ftechstack/comments": "^3.4",
         "jorenvanhocht/laravel-share": "^2.0",
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.7",
-        "laravelista/comments": "3.0.0",
         "overtrue/laravel-follow": "^1.1",
         "spatie/laravel-medialibrary": "^7.0.0"
     },
