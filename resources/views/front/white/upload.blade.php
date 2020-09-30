@@ -12,7 +12,7 @@
                 <hr class="t-m-auto t-my-3 t-w-2/3 lg:t-w-3/4 t-border t-border-gray-400" />
                 <p><br /></p>
                 <p>
-                    <a class="btn btn--large btn--secondary btn--neutral caps" href="{{ $contest->intro_button2_text }}">
+                    <a class="btn btn--large btn--secondary btn--neutral caps" href="{{ $contest->intro_button2_link }}">
                         <span class="tiny">{{ $contest->intro_button2_text }}</span>
                     </a>
                 </p>
