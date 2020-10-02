@@ -10,34 +10,26 @@
                         @if(!empty($contest->prize_body)) 
                         <p>{!! $contest->prize_body !!}</p>
                         @endif
-                        <table class="t-table-auto table-borderless">
-                            <tbody>
-                                <tr>
-                                    <td class="t-font-bold">{{ $contest->prize_first_title }}</td>
-                                    <td>{!! $contest->prize_first_body !!}</td>
-                                </tr>
-                                @if(!empty($contest->prize_second_title))
-                                <tr>
-                                    <td class="t-font-bold">{{ $contest->prize_second_title }}</td>
-                                    <td>{!! $contest->prize_second_body !!}</td>
-                                </tr>
-                                @endif
-                                @if(!empty($contest->prize_third_title))
-                                <tr>
-                                    <td  class="t-font-bold">{{ $contest->prize_third_title }}</td>
-                                    <td>{!! $contest->prize_third_body !!}</td>
-                                </tr>
-                                @endif
-                            </tbody>
-                        </table>
+                        <h4 class="t-text-xl md:t-text-2xl lg:t-text-3xl">{{ $contest->prize_first_title }}</h4>
+                        <p>{!! $contest->prize_first_body !!}</p>
+                        @if(!empty($contest->prize_second_title))
+                        <h4 class="t-text-xl md:t-text-2xl lg:t-text-3xl">{{ $contest->prize_second_title }}</h4>
+                        <p>{!! $contest->prize_second_body !!}</p>
+                        @endif
+                        @if(!empty($contest->prize_third_title))
+                        <h4 class="t-text-xl md:t-text-2xl lg:t-text-3xl">{{ $contest->prize_third_title }}</h4>
+                        <p>{!! $contest->prize_third_body !!}</p>
+                        @endif
                         <h4 class="t-text-xl md:t-text-2xl lg:t-text-3xl">{{ $contest->prize_special_title }}</h4>
                         <p>{!! $contest->prize_special_body !!}</p>
                         <h4 class="t-text-xl md:t-text-2xl lg:t-text-3xl">{{ $contest->prize_voting_title }}</h4>
                         <p>{!! $contest->prize_voting_body !!}</p>
                         <h4 class="t-text-xl md:t-text-2xl lg:t-text-3xl">{{ $contest->prize_elgible_title }}</h4>
                         <p>{!! $contest->prize_elgible_body !!}</p>
+                        @if(!empty($contest->prize_commission_title)) 
                         <h4 class="t-text-xl md:t-text-2xl lg:t-text-3xl">{{ $contest->prize_commission_title }}</h4>
                         <p>{!! $contest->prize_commission_body !!}</p>
+                        @endif
                     </div>                    
                 </div>
             </div>

@@ -301,12 +301,12 @@
                     <ul class="footer__secondary grid__item inline-list unstyled medium-up--two-thirds">
                         <li class="footer__copyright"><a href="https://withlovedarling.com">&copy; With Love Darling 2019</a></li>
                         <li><a href="//contests.withlovedarling.com">CONTESTS</a></li>
-                        <li><a href="/pages/shipping">SHIPPING</a></li>
-                        <li><a href="/pages/jewellery-info">JEWELLERY INFO</a></li>
-                        <li><a href="/pages/jewellery-care">JEWELLERY CARE</a></li>
-                        <li><a href="/pages/returns">RETURNS</a></li>
-                        <li><a href="/pages/affiliates">AFFILIATES</a></li>
-                        <li><a href="/pages/contact-us">CONTACT US</a></li>
+                        <li><a href="//withlovedarling.com/pages/shipping">SHIPPING</a></li>
+                        <li><a href="//withlovedarling.com/pages/jewellery-info">JEWELLERY INFO</a></li>
+                        <li><a href="//withlovedarling.com/pages/jewellery-care">JEWELLERY CARE</a></li>
+                        <li><a href="//withlovedarling.com/pages/returns">RETURNS</a></li>
+                        <li><a href="//withlovedarling.com/pages/affiliates">AFFILIATES</a></li>
+                        <li><a href="//withlovedarling.com/pages/contact-us">CONTACT US</a></li>
                     </ul>
                     <ul class="footer__payment payment-icons grid__item inline-list grid__item medium-up--one-third">
                         <li>

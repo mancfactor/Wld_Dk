@@ -20,7 +20,7 @@ class ContestController extends Controller
     }
     
     public function index() {
-        $contests = Contest::latest('start_date')->active()->paginate(10);
+        $contests = Contest::latest('start_date')->paginate(10);
 
         return view('contests.index')->with('contests',$contests);
     }
