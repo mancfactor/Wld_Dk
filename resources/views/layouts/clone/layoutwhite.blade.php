@@ -299,14 +299,14 @@
                 <div class="grid grid--uniform"></div>
                 <div class="grid">
                     <ul class="footer__secondary grid__item inline-list unstyled medium-up--two-thirds">
-                        <li class="footer__copyright"><a href="https://withlovedarling.com">&copy; With Love Darling 2019</a></li>
-                        <li><a href="//contests.withlovedarling.com">CONTESTS</a></li>
-                        <li><a href="//withlovedarling.com/pages/shipping">SHIPPING</a></li>
-                        <li><a href="//withlovedarling.com/pages/jewellery-info">JEWELLERY INFO</a></li>
-                        <li><a href="//withlovedarling.com/pages/jewellery-care">JEWELLERY CARE</a></li>
-                        <li><a href="//withlovedarling.com/pages/returns">RETURNS</a></li>
-                        <li><a href="//withlovedarling.com/pages/affiliates">AFFILIATES</a></li>
-                        <li><a href="//withlovedarling.com/pages/contact-us">CONTACT US</a></li>
+                        <li class="footer__copyright"><a href="https://withlovedarling.dk">&copy; With Love Darling 2020</a></li>
+                        <li><a href="//contests.withlovedarling.dk">CONTESTS</a></li>
+                        <li><a href="//withlovedarling.dk/pages/shipping">SHIPPING</a></li>
+                        <li><a href="//withlovedarling.dk/pages/jewellery-info">JEWELLERY INFO</a></li>
+                        <li><a href="//withlovedarling.dk/pages/jewellery-care">JEWELLERY CARE</a></li>
+                        <li><a href="//withlovedarling.dk/pages/returns">RETURNS</a></li>
+                        <li><a href="//withlovedarling.dk/pages/affiliates">AFFILIATES</a></li>
+                        <li><a href="//withlovedarling.dk/pages/contact-us">CONTACT US</a></li>
                     </ul>
                     <ul class="footer__payment payment-icons grid__item inline-list grid__item medium-up--one-third">
                         <li>

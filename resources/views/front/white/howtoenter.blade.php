@@ -1,6 +1,6 @@
 <section class="index-rte rich-text" data-section-id="index-rich-text" data-section-type="rich-text">
     <div class="wrapper" data-aos-duration="500" data-aos="fade-up">
-        <div id="howtoenter" class="grid">
+        <div id="howtoenter" class="grid t-max-w-screen-md"  style="max-width: 768px; margin:auto;">
             <h3 class="t-text-2xl md:t-text-3xl lg:t-text-4xl xl:t-text-5xl">{{ $contest->how_title}}</h3>
             <div class="row">
                 <div  class="col">

@@ -6,7 +6,7 @@
                 <a href="/" class="nav-link">HOME</a>
             </li>
             <li class="parent ">
-                <a href="#" class="nav-link">SHOP BY CATEGORY
+                <a href="#" class="nav-link">SHOP
                     <span class="nav-carat-small"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38"><path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"/></svg></span>
                 </a>
                 <a href="#" class="nav-carat ariaToggle" aria-haspopup="true" aria-controls="shop-by-category-2-desktop" aria-expanded="false">
@@ -18,25 +18,22 @@
                 <div class="main-menu-dropdown  main-menu-dropdown--has-links" id="shop-by-category-2-desktop">
                     <ul>
                         <li class="child ">
-                            <a href="//withlovedarling.com/collections/necklaces" class="nav-link">NECKLACES</a>
+                            <a href="//withlovedarling.dk//collections/necklaces" class="nav-link">HALSKÆDER</a>
                         </li>
                         <li class="child ">
-                            <a href="//withlovedarling.com/collections/bracelets" class="nav-link">BRACELETS</a>
+                            <a href="//withlovedarling.dk/collections/bracelets" class="nav-link">ARMBÅND</a>
                         </li>
                         <li class="child ">
-                            <a href="//withlovedarling.com/collections/pendants-charms" class="nav-link">CHARMS</a>
+                            <a href="//withlovedarling.dk//collections/earrings" class="nav-link">ØRENRINGE</a>
                         </li>
                         <li class="child ">
-                            <a href="//withlovedarling.com/collections/earrings" class="nav-link">EARRINGS</a>
-                        </li>
-                        <li class="child ">
-                            <a href="//withlovedarling.com/collections/rings" class="nav-link">RINGS</a>
+                            <a href="//withlovedarling.dk//collections/rings" class="nav-link">RINGE</a>
                         </li>
                     </ul>
                 </div>
             </li>
             <li class="parent "> 
-                <a href="//withlovedarling.com/collections/global-goals-vermeil-collection" class="nav-link"> COLLECTIONS 
+                <a href="//withlovedarling.dk/collections/verdensmal" class="nav-link"> VERDENSMÅL 
                     <span class="nav-carat-small">
                         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
                             <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"/>
@@ -51,15 +48,12 @@
                 </a>
                 <div class="main-menu-dropdown main-menu-dropdown--has-links" id="collections-3-desktop">
                     <ul>
-                        <li class="child "> <a href="//withlovedarling.com/collections/new-items" class="nav-link"> NEW IN </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/collections/global-goals-vermeil-collection" class="nav-link"> GLOBAL GOALS </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/collections/you-me" class="nav-link"> YOU &amp; ME </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/collections/totem-medallions" class="nav-link"> ANIMAL MEDALLIONS </a> </li>
+                        <li class="child "> <a href="//withlovedarling.dk/blogs/we-are-loving/vores-baeredygtigheds-manifest" class="nav-link">Vores bæredygtigheds-manifest </a> </li>
                     </ul>
                 </div>
             </li>
             <li class="parent "> 
-                <a href="/" class="nav-link"> CONTESTS 
+                <a href="/" class="nav-link"> KONKURRENCER
                     <span class="nav-carat-small">
                         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
                             <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"/>
@@ -81,61 +75,70 @@
                                 VOGUE
                             @endif
                         </a> </li>
-                        <li class="child "> <a href="/featured" class="nav-link"> FEATURED </a> </li>
+                        <li class="child "> <a href="/featured" class="nav-link"> FUNKTIONERET </a> </li>
                     </ul>
                 </div>
             </li>
-            <li class="parent "> 
-                <a href="//withlovedarling.com/pages/the-global-goals" class="nav-link"> THE GLOBAL GOALS 
-                    <span class="nav-carat-small">
-                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
-                            <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"/>
-                        </svg>
-                    </span> 
+            <li class="child">
+                <a href="//withlovedarling.dk/collections/childrens-global-goal-collection" class="nav-link">
+                MINI ME
                 </a>
-                <a href="#" class="nav-carat ariaToggle" aria-haspopup="true" aria-controls="the-global-goals-4-desktop" aria-expanded="false"> 
-                    <span class="visually-hidden">+</span>
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
-                        <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd" /> 
-                    </svg>
+             </li>
+             <li class="child">
+                <a href="//withlovedarling.dk/collections/gaver" class="nav-link">
+                GAVER
                 </a>
-                <div class="main-menu-dropdown main-menu-dropdown--has-links" id="the-global-goals-4-desktop">
-                    <ul>
-                        <li class="child "> <a href="//withlovedarling.com/pages/the-global-goals" class="nav-link"> About The Goals </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/collections/the-global-goals-collection" class="nav-link"> The Global Goals Collection in Gold </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/collections/global-goals-vermeil-collection" class="nav-link"> The Global Goals Collection in Vermeil </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/collections/global-goals-collection-in-silver" class="nav-link"> The Global Goals Collection in Silver </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/pages/we-the-people" class="nav-link"> We The People </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/pages/global-goalscast" class="nav-link"> Global GoalsCast </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/pages/interview-with-our-founder" class="nav-link"> Interview With Our Founder </a> </li>
-                    </ul>
+             </li>
+             <li class="parent">
+                <a href="//withlovedarling.dk/pages/om-os" class="nav-link">
+                   OM OS
+                   <span class="nav-carat-small">
+                      <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
+                         <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"></path>
+                      </svg>
+                   </span>
+                </a>
+                <a href="#" class="nav-carat ariaToggle" aria-haspopup="true" aria-controls="om-os-9-desktop" aria-expanded="false">
+                   <span class="visually-hidden">+</span>
+                   <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
+                      <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"></path>
+                   </svg>
+                </a>
+                <div class="main-menu-dropdown  main-menu-dropdown--has-links" id="om-os-9-desktop">
+                   <ul>
+                      <li class="child ">
+                         <a href="//withlovedarling.dk/pages/forhandlere" class="nav-link">
+                         FORHANDLERE
+                         </a>
+                      </li>
+                      <li class="child ">
+                         <a href="//withlovedarling.dk/pages/presse" class="nav-link">
+                         PRESSE
+                         </a>
+                      </li>
+                      <li class="child ">
+                         <a href="//withlovedarling.dk/pages/om-os" class="nav-link">
+                         VORES HISTORIE
+                         </a>
+                      </li>
+                      <li class="child ">
+                         <a href="//withlovedarling.dk/pages/kontakt" class="nav-link">
+                         KONTAKT
+                         </a>
+                      </li>
+                      <li class="child ">
+                         <a href="//withlovedarling.dk/pages/bliv-brand-ambassador" class="nav-link">
+                         VIL DU VÆRE BRAND AMBASSADØR
+                         </a>
+                      </li>
+                      <li class="child ">
+                         <a href="//withlovedarling.dk/blogs/we-are-loving" class="nav-link">
+                         BLOG
+                         </a>
+                      </li>
+                   </ul>
                 </div>
-            </li>
-            <li class="parent "> 
-                <a href="//withlovedarling.com/pages/about-us" class="nav-link"> ABOUT 
-                    <span class="nav-carat-small">
-                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
-                            <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"/>
-                        </svg>
-                    </span> 
-                </a>
-                <a href="#" class="nav-carat ariaToggle" aria-haspopup="true" aria-controls="about-5-desktop" aria-expanded="false"> 
-                    <span class="visually-hidden">+</span>
-                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
-                        <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd" /> 
-                    </svg>
-                </a>
-                <div class="main-menu-dropdown main-menu-dropdown--has-links" id="about-5-desktop">
-                    <ul>
-                        <li class="child "> <a href="//withlovedarling.com/pages/about-us" class="nav-link"> ABOUT US </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/pages/press" class="nav-link"> PRESS </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/pages/stockists" class="nav-link"> STORES </a> </li>
-                        <li class="child "> <a href="//withlovedarling.com/pages/contact-us" class="nav-link"> CONTACT US </a> </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="child "> <a href="//withlovedarling.com/blogs/we-are-loving" class="nav-link"> BLOG </a></li>
-            <li class="child "> <a href="//withlovedarling.com/pages/contact-us" class="nav-link"> CONTACT US </a></li>
+             </li>
             <li class="nav__account medium-up--hide"><a href="/account/login" id="customer_login_link">Log in</a></li>
             <li class="nav__account medium-up--hide"><a href="/account/register" id="customer_register_link">Create an account</a></li>
         </ul>
