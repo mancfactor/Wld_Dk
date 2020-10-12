@@ -18,6 +18,10 @@ $table->string('contest_heading', 100);
     {!! Form::text('contest_heading', null, ['class' => 'form-control', 'placeholder' => 'Title for the Contests Section','maxlength' => 100 ]) !!}
 </div> 
 <div class="form-group">
+    {!! Form::label('logo_media_id', 'Logo:') !!} 
+    {!! Form::select('logo_media_id', $logoOptions, $contest->logo_media_id, ['class'=>'form-control', 'id'=>'logo_media_id']) !!}
+</div> 
+<div class="form-group">
     {!! Form::label('name', 'Name:  (100 chars max)') !!} 
     {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Title for the Contests Section','maxlength' => 100 ]) !!}
 </div> 

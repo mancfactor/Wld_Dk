@@ -51,7 +51,8 @@ class ContestController extends Controller
 
         //$mediaOptions = Media::where([['model_type','=',\App\Site::class], ['model_id', '=', 1]])->orderBy('name','asc')->pluck('name','id')->toArray();
         $mediaOptions = Media::where('model_type',\App\Site::class)->orderBy('name','asc')->pluck('name','id');
-        //$mediaOptions = Arr::prepend($mediaOptions,"No Image Selected",0);
+        $logoOptions = Media::where('model_type',\App\Logo::class)->orderBy('name','asc')->pluck('name','id');
+        $logoOptions = collect(['' => 'No Logo Selected'] + $logoOptions->all());
         
         return view('contests.edit')->with('contest',$contest)
                     ->with('startDateDefault',$contest->getStartDate())
@@ -60,6 +61,7 @@ class ContestController extends Controller
                     ->with('voteDateDefault',$contest->getVoteDate())
                     ->with('tagsOptions',$tagsOptions)
                     ->with('tagsDefault',$tagsDefault)
+                    ->with('logoOptions',$logoOptions)
                     ->with('mediaOptions',$mediaOptions);
     }
 
@@ -72,7 +74,9 @@ class ContestController extends Controller
 
         //$mediaOptions = Media::where([['model_type','=',\App\Site::class], ['model_id', '=', 1]])->orderBy('name','asc')->pluck('name','id')->toArray();
         $mediaOptions = Media::where('model_type',\App\Site::class)->orderBy('name','asc')->pluck('name','id');
+        $logoOptions = Media::where('model_type',\App\Logo::class)->orderBy('name','asc')->pluck('name','id');
         //$mediaOptions = Arr::prepend($mediaOptions,"No Image Selected",0);
+        $logoOptions = collect(['' => 'No Logo Selected'] + $logoOptions->all());
 
                 
         return view('contests.create')
@@ -83,6 +87,7 @@ class ContestController extends Controller
             ->with('voteDateDefault',date('Y-m-d'))
             ->with('tagsOptions',$tagsOptions)
             ->with('tagsDefault',$tagsDefault)
+            ->with('logoOptions',$logoOptions)
             ->with('mediaOptions',$mediaOptions);
     }
     
@@ -119,6 +124,9 @@ class ContestController extends Controller
         }
         if(is_null($data['intro_media2_id']) || !($data['intro_media2_id'])) {
             $data['intro_media2_id'] = null;
+        }
+        if(is_null($data['logo_media_id']) || !($data['logo_media_id'])) {
+            $data['logo_media_id'] = null;
         }
         $contest->update($data);
         $contest->tags()->sync($request->input('tags'));

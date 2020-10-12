@@ -198,9 +198,13 @@ class Contest extends Model
 {
 
     // enable mass-assignment of fields
-    protected $fillable = [ 'name','slogan','active','start_date','submit_date','vote_date','end_date','hashtag','contest_heading','menu_title','steps_media_id','step1_title','step1_body','step2_title','step2_body','step3_title','step3_body','video_heading','video_link','button1_text','button1_link','button2_text','button2_link','button3_text','button3_link','button4_text','button4_link','button5_text','button5_link','button6_text','button6_link','intro_media1_id','intro_body1','intro_body2','intro_button1_text'
-                            ,'intro_button1_link','intro_media2_id','intro_body3','intro_button2_text','intro_button2_link','how_title','how_body','how_step1_title','how_step1_body','how_step2_title','how_step2_body','how_step3_title','how_step3_body','rules_title','rules_body',
-                            'prize_heading','prize_title','prize_body','prize_first_title','prize_first_body','prize_second_title','prize_second_body','prize_third_title','prize_third_body','prize_special_title','prize_special_body','prize_voting_title','prize_voting_body','prize_elgible_title','prize_elgible_body','prize_commission_title','prize_commission_body','faq_heading','faq_qa1_title','faq_qa1_body','faq_qa2_title','faq_qa2_body','faq_qa3_title','faq_qa3_body','faq_qa4_title','faq_qa4_body','faq_qa5_title','faq_qa5_body'];
+    protected $fillable = [ 'name','slogan','active','start_date','submit_date','vote_date','end_date','hashtag','contest_heading','menu_title','steps_media_id','step1_title','step1_body','step2_title','step2_body','step3_title','step3_body','video_heading','video_link','button1_text',
+                            'button1_link','button2_text','button2_link','button3_text','button3_link','button4_text','button4_link','button5_text','button5_link','button6_text','button6_link','intro_media1_id','intro_body1','intro_body2','intro_button1_text',
+                            'intro_button1_link','intro_media2_id','intro_body3','intro_button2_text','intro_button2_link','how_title','how_body','how_step1_title','how_step1_body','how_step2_title','how_step2_body','how_step3_title','how_step3_body','rules_title','rules_body',
+                            'prize_heading','prize_title','prize_body','prize_first_title','prize_first_body','prize_second_title','prize_second_body','prize_third_title','prize_third_body','prize_special_title','prize_special_body','prize_voting_title','prize_voting_body',
+                            'prize_elgible_title','prize_elgible_body','prize_commission_title','prize_commission_body','faq_heading','faq_qa1_title','faq_qa1_body','faq_qa2_title','faq_qa2_body','faq_qa3_title','faq_qa3_body','faq_qa4_title','faq_qa4_body','faq_qa5_title','faq_qa5_body',
+                            'logo_media_id'
+                        ];
      
     // Convert to carbon instances
     protected $dates = ['start_date','end_date','submit_date','vote_date'];
@@ -303,6 +307,13 @@ class Contest extends Model
      * Contest has media     
     */
     public function introMedia2() {
+        return $this->belongsTo('Spatie\MediaLibrary\Models\Media');
+    }
+
+    /***
+     * Contest has media     
+    */
+    public function logoMedia() {
         return $this->belongsTo('Spatie\MediaLibrary\Models\Media');
     }
 }

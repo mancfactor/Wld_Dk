@@ -10,7 +10,15 @@
         </small>
     </nav>
 </div>
-<h2 class="theme coll-heading t-text-base sm:t-text-xl md:t-text-2xl lg:t-text-4xl xl:t-text-5xl">{{ $contest->contest_heading}}</h2>
+@if(!empty($contest->logo_media_id))
+<h2 class="theme coll-heading t-text-base sm:t-text-xl md:t-text-2xl lg:t-text-4xl xl:t-text-5xl">
+    <img    class="t-object-cover t-object-center"
+                srcset="{{ $contest->logoMedia->getSrcSet('responsive')}}" 
+                src="{{ $contest->logoMedia->getUrl('_720') }}">
+</h2>
+@else
+    <h2 class="theme coll-heading t-text-base sm:t-text-xl md:t-text-2xl lg:t-text-4xl xl:t-text-5xl">{{ $contest->contest_heading}}</h2> 
+@endif
 <div class="stepsrow wldpink">
     <div class="stepscolumn">
         <img    class="t-object-cover t-object-center"

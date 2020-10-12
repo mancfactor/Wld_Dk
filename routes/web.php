@@ -57,3 +57,6 @@ Route::get('/logout', 'ContestsController@logout');
 Route::get('admin/site-media/add', 'SiteController@addMedia');
 Route::patch('site/update-media/{site}', 'SiteController@updateMedia');
 Route::get('/admin/site-media','SiteController@siteMedia');
+Route::get('admin/logo-media/add', 'LogoController@addMedia');
+Route::patch('logo/update-media/{logo}', 'LogoController@updateMedia');
+Route::get('/admin/logo-media','LogoController@logoMedia');

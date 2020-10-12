@@ -17,6 +17,9 @@
                         <a href="{{ url('/admin/site-media')}}">Site Media</a>
                     </div>
                     <div class="row links panel-heading">
+                        <a href="{{ url('/admin/logo-media')}}">Logos</a>
+                    </div>
+                    <div class="row links panel-heading">
                         <a href="{{ url('contests')}}">Contests</a>
                     </div>
                     <div class="row links panel-heading">
