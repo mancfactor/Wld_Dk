@@ -19,6 +19,15 @@ class ContestsController extends Controller
     public function __construct() {
         ini_set('upload_max_filesize', '100M');
         $this->middleware('auth')->only('enterContest');
+	
+	try{
+        
+            $contest = Contest::active()->firstOrFail();
+
+
+        } catch (Exception $e) {
+            abort(500);
+        } 
     }
 
     /**
@@ -28,15 +37,6 @@ class ContestsController extends Controller
      */
     public function index()
     {
-        try{
-            $contestId = 1;
-
-            $contest = Contest::active()->findOrFail($contestId);
-
-
-        } catch (Exception $e) {
-            abort(500);
-        } 
 
         return view('front.newsite3')->with('contest',$contest);
     }
@@ -52,7 +52,7 @@ class ContestsController extends Controller
         $entries_votes = DB::table('entries')
         ->join('followables', function ($join){
             $join->on('entries.id', '=', 'followables.followable_id')
-            ->where([['followables.followable_type','=',Entry::class],['entries.approved','=',1]]);
+            ->where([['followables.followable_type','=',Entry::class],['entries.approved','=',1],['entries.contest_id','=',$contest->id]]);
         })
         ->select('entries.id', DB::raw('count(*) as votes'))
         ->groupBy('entries.id')
@@ -92,7 +92,6 @@ class ContestsController extends Controller
     public function test()
     {
         try{
-            $contest = Contest::findOrFail(1);
             $entries = Entry::approved()->orderBy('created_at', 'desc')->paginate(9);
         } catch (Exception $e) {
             abort(404);
@@ -134,7 +133,7 @@ class ContestsController extends Controller
     public function addEntry()
     {
         $userId = auth()->user()->id;
-        $contestId = 1;
+        $contestId = $contest->id;
 
         $contestOptions = Contest::active()->where('id',$contestId)
         ->orderBy('name', 'asc')
