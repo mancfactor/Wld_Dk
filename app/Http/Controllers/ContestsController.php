@@ -16,13 +16,15 @@ use Illuminate\Support\Facades\DB;
 
 class ContestsController extends Controller
 {
+    private $contest;
+
     public function __construct() {
         ini_set('upload_max_filesize', '100M');
         $this->middleware('auth')->only('enterContest');
 	
 	try{
         
-            $contest = Contest::active()->firstOrFail();
+            $this->contest = Contest::active()->firstOrFail();
 
 
         } catch (Exception $e) {
@@ -38,7 +40,7 @@ class ContestsController extends Controller
     public function index()
     {
 
-        return view('front.newsite3')->with('contest',$contest);
+        return view('front.newsite3')->with('contest',$this->contest);
     }
 
     /**
@@ -48,12 +50,13 @@ class ContestsController extends Controller
      */
     public function featured()
     {
-        $entries = Entry::approved()->orderBy('created_at', 'desc')->paginate(9);
+        $entries = Entry::approved()->where([['entries.contest_id','=',$this->contest->id]])->orderBy('created_at', 'desc')->paginate(9);
         $entries_votes = DB::table('entries')
         ->join('followables', function ($join){
             $join->on('entries.id', '=', 'followables.followable_id')
-            ->where([['followables.followable_type','=',Entry::class],['entries.approved','=',1],['entries.contest_id','=',$contest->id]]);
+            ->where([['followables.followable_type','=',Entry::class],['entries.approved','=',1]]);
         })
+        ->where([['entries.contest_id','=',$this->contest->id]])
         ->select('entries.id', DB::raw('count(*) as votes'))
         ->groupBy('entries.id')
         ->pluck('votes','id');;
@@ -97,7 +100,7 @@ class ContestsController extends Controller
             abort(404);
         }    
         
-        return view('front.test')->with('contest',$contest)->with('entries', $entries);
+        return view('front.test')->with('contest',$this->contest)->with('entries', $entries);
     }
 
     public function steps()
@@ -133,7 +136,7 @@ class ContestsController extends Controller
     public function addEntry()
     {
         $userId = auth()->user()->id;
-        $contestId = $contest->id;
+        $contestId = $this->contest->id;
 
         $contestOptions = Contest::active()->where('id',$contestId)
         ->orderBy('name', 'asc')
