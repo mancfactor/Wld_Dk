@@ -18,13 +18,13 @@
                 <div class="main-menu-dropdown  main-menu-dropdown--has-links" id="shop-by-category-2-desktop">
                     <ul>
                         <li class="child ">
-                            <a href="//withlovedarling.dk//collections/necklaces" class="nav-link">HALSKÆDER</a>
+                            <a href="//withlovedarling.dk//collections/necklaces" class="nav-link">HALSKÃ†DER</a>
                         </li>
                         <li class="child ">
-                            <a href="//withlovedarling.dk/collections/bracelets" class="nav-link">ARMBÅND</a>
+                            <a href="//withlovedarling.dk/collections/bracelets" class="nav-link">ARMBÃ…ND</a>
                         </li>
                         <li class="child ">
-                            <a href="//withlovedarling.dk//collections/earrings" class="nav-link">ØRENRINGE</a>
+                            <a href="//withlovedarling.dk//collections/earrings" class="nav-link">Ã˜RENRINGE</a>
                         </li>
                         <li class="child ">
                             <a href="//withlovedarling.dk//collections/rings" class="nav-link">RINGE</a>
@@ -33,7 +33,7 @@
                 </div>
             </li>
             <li class="parent "> 
-                <a href="//withlovedarling.dk/collections/verdensmal" class="nav-link"> VERDENSMÅL 
+                <a href="//withlovedarling.dk/collections/verdensmal" class="nav-link"> VERDENSMÃ…L 
                     <span class="nav-carat-small">
                         <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow-right" viewBox="0 0 20 38">
                             <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"/>
@@ -48,7 +48,7 @@
                 </a>
                 <div class="main-menu-dropdown main-menu-dropdown--has-links" id="collections-3-desktop">
                     <ul>
-                        <li class="child "> <a href="//withlovedarling.dk/blogs/we-are-loving/vores-baeredygtigheds-manifest" class="nav-link">Vores bæredygtigheds-manifest </a> </li>
+                        <li class="child "> <a href="//withlovedarling.dk/blogs/we-are-loving/vores-baeredygtigheds-manifest" class="nav-link">Vores bÃ¦redygtigheds-manifest </a> </li>
                     </ul>
                 </div>
             </li>
@@ -72,10 +72,10 @@
                             @if(!empty($contest))
                                 {{ $contest->menu_title}} 
                             @else
-                                VOGUE
+                                CONTEST
                             @endif
                         </a> </li>
-                        <li class="child "> <a href="/featured" class="nav-link"> FUNKTIONERET </a> </li>
+                        <li class="child "> <a href="/featured" class="nav-link"> STEM PÃ… DIN FAVORIT </a> </li>
                     </ul>
                 </div>
             </li>
@@ -128,7 +128,7 @@
                       </li>
                       <li class="child ">
                          <a href="//withlovedarling.dk/pages/bliv-brand-ambassador" class="nav-link">
-                         VIL DU VÆRE BRAND AMBASSADØR
+                         VIL DU VÃ†RE BRAND AMBASSADÃ˜R
                          </a>
                       </li>
                       <li class="child ">
