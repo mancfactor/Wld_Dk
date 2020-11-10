@@ -15,11 +15,11 @@
                         <path d="M15.932 18.649L.466 2.543A1.35 1.35 0 0 1 0 1.505c0-.41.155-.77.466-1.081A1.412 1.412 0 0 1 1.504 0c.41 0 .756.141 1.038.424l16.992 17.165c.31.283.466.636.466 1.06 0 .423-.155.777-.466 1.06L2.542 36.872a1.412 1.412 0 0 1-1.038.424c-.41 0-.755-.141-1.038-.424A1.373 1.373 0 0 1 0 35.813c0-.423.155-.776.466-1.059L15.932 18.65z" fill="#726D75" fill-rule="evenodd"/>
                 </svg>
             </span>
-            <a href="//contests.withlovedarling.dk/featured" title="Featured Entries">FUNKTIONEREDE VIRKSOMHEDER</a>
+            <a href="//contests.withlovedarling.dk/featured" title="Featured Entries">STEM PÅ DIN FAVORIT</a>
         </small>
     </nav>
 </div>
-<h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">FUNKTIONEREDE VIRKSOMHEDER ({{$entries->total()}})</h2>
+<h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">STEM PÅ DIN FAVORIT ({{$entries->total()}})</h2>
 <div class="t-flex t-flex-wrap wldpink t-antialiased t-text-gray-900">
 	@foreach($entries as $entry)
 		@foreach ($entry->getMedia('entries') as $pic)
