@@ -29,7 +29,7 @@
         <p class="t-font-bold t-my-3 t-text-xl md:t-text-2xl lg:t-text-3xl xl:t-text-4xl">{{ $contest->slogan}}</p>
         <p></p>
         <hr class="t-m-auto t-my-2 t-w-4/5 lg:t-w-3/5 t-border t-border-gray-400" />
-        <p class="t-text-lg md:t-text-2xl">Sådan gør du</p>
+        <p class="t-text-lg md:t-text-2xl">Sï¿½dan gï¿½r du</p>
         <p class="t-font-bold t-text-4xl lg:t-text-6xl t-m-0 xl:t-mt-6">1</p>
         <p class="t-font-bold t-text-2xl sm:t-text-4xl t-m-0">{{ $contest->step1_title}}</p>
         <p class="t-text-base sm:t-text-lg t-m-0">{!! $contest->step1_body !!}</p>
@@ -46,7 +46,7 @@
         <p class="t-font-bold t-text-2xl sm:t-text-4xl">Indsend inden den {{ $contest->getSubmitDateText() }}</p>
         <p class="t-text-base sm:t-text-lg">
             <a class="btn btn--large btn--secondary btn--neutral caps" href="/enter-contest">
-                Indtast Konkurrence
+                DELTAG I KONKURRENCEN
             </a>
         </p>
     </div>
