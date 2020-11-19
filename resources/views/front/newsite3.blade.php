@@ -3,6 +3,7 @@
 @section('content')
     @include('front.white.steps2')
     @include('front.white.video')
+    @include('front.white.vote')
     @include('front.white.featuredintro2')
     @include('front.white.upload')
     @include('front.white.howtoenter')
