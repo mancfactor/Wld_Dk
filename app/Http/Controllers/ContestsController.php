@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contest;
 use App\Entry;
 use App\Tag;
+use App\Site;
 use Exception;
 use Jorenvh\Share\Share;
 use Illuminate\Http\Request;
@@ -130,7 +131,10 @@ class ContestsController extends Controller
         $userId = auth()->user()->id;
 
         $entries = Entry::where('user_id',$userId)->paginate(9);
-        return view('front.entercontest')->with('entries',$entries);
+
+        $site = Site::where('name', ENV('SITE_NAME'))->first();
+        
+        return view('front.entercontest')->with('entries',$entries)->with('site',$site);
     }
 
     public function addEntry()

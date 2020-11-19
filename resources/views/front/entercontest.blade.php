@@ -20,9 +20,29 @@
         </small>
     </nav>
 </div>
-<div class="t-m-0 t-justify-center t-align-center t-text-center"> 
+<div class="t-m-0 t-justify-center t-align-center t-text-center">
+    <h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">Design Templates</h2>
+    <div class="t-flex t-flex-wrap wldpink t-antialiased t-text-gray-900">
+        @if($site->media->count())
+            @foreach($site->getMedia('site') as $media)
+                @if(($media->id >= 18) && ($media->id < 22))
+            
+                    <div class="t-mt-6 t-mb-6 t-px-6 t-max-w-xl t-w-full sm:t-w-1/2 lg:t-w-1/2 t-content-center">
+                        <div class="t-bg-white t-rounded-lg t-overflow-hidden t-text-center">
+                            <a id="product-{{ $media->id }}" class="product-link" href="{{ $media->getUrl('responsive') }}" aria-label="{{ $media->name }}">
+                                <div class="t-relative t-pb-2/3" >
+                                    <img class="t-top-0 t-h-full t-w-full t-object-cover t-object-center" src="{{$media->getUrl('thumb')}}" srcset="{{$media->getSrcSet('responsive')}}"  alt="{{$media->name}}"  />	
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+        @endif
+    </div>
+
     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
-    <p class="t-text-center t-font-bold t-mt-4 t-mb-4 t-text-lg sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">Submit your design,<br />and tell us it's story.</p>
+    <p class="t-text-center t-font-bold t-mt-4 t-mb-4 t-text-lg sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">Choose a template,<br/>create your design,<br />and tell us it's story.</p>
     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
     <p><br /></p>
     <p></p>

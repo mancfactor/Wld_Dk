@@ -49,5 +49,12 @@
                 DELTAG I KONKURRENCEN
             </a>
         </p>
+        <br/>
+        <p class="t-font-bold t-text-2xl sm:t-text-4xl">Stem P&aring; Din Favorit</p>
+        <p class="t-text-base sm:t-text-lg">
+            <a class="btn btn--large btn--secondary btn--neutral caps" href="/featured">
+                STEM NU
+            </a>
+        </p>
     </div>
 </div>
