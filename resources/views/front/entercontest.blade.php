@@ -21,7 +21,7 @@
     </nav>
 </div>
 <div class="t-m-0 t-justify-center t-align-center t-text-center">
-    <h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">Design Templates</h2>
+    <h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">Design Skabeloner</h2>
     <div class="t-flex t-flex-wrap wldpink t-antialiased t-text-gray-900">
         @if($site->media->count())
             @foreach($site->getMedia('site') as $media)
@@ -42,17 +42,17 @@
     </div>
 
     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
-    <p class="t-text-center t-font-bold t-mt-4 t-mb-4 t-text-lg sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">Choose a template,<br/>create your design,<br />and tell us it's story.</p>
+    <p class="t-text-center t-font-bold t-mt-4 t-mb-4 t-text-lg sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">V&aelig;lg en skabelon,<br/>Indsend dit design,<br />og fort&aelig;l os inspirationen bag det.</p>
     <hr style="border: 1px solid #545454;margin: auto;margin-top:20px;margin-bottom:20px;height:0;width: 30%;" />
     <p><br /></p>
     <p></p>
     <p style="text-align: center;">
         <a class="btn btn--large btn--secondary btn--neutral caps" href="/contest/add-entry">
-            <span class="tiny">UPLOAD YOUR DESIGN</span>
+            <span class="tiny">UPLOAD DIT DESIGN</span>
         </a>
     </p>
 
-    <h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">CONTEST ENTRIES ({{$entries->total()}})</h2>
+    <h2 class="t-m-0 t-p-4 t-text-center t-text-base sm:t-text-xl lg:t-text-3xl xl:t-text-4xl">INDSENDTE DESIGN ({{$entries->total()}})</h2>
     <div class="t-flex t-content-center t-px-10 t-text-xs sm:t-text-sm wldpink">
         @if(count($entries))
         <table class="t-table-auto t-m-4 t-w-full t-border-gray-500">
