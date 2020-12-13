@@ -29,7 +29,7 @@ class ContestsController extends Controller
 
 
         } catch (Exception $e) {
-            abort(500);
+            
         } 
     }
 
